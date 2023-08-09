@@ -105,21 +105,383 @@
 
 <div class="row m-0 p-0" style="border-top: 1px solid #ddd; flex-direction: row-reverse;">
     <div class="col-sm-1 mt-2 p-0 pr-1">
+      <h3 class="bibliography-year">2023</h3>
+    </div>
+    <div class="col-sm-11 p-0">
+      <ol class="bibliography">
+
+
+<li><div class="row m-0 mt-3 p-0">
+     <div class="col-sm-1 p-0 abbr">
+        <a class="badge font-weight-bold light-blue darken-1 align-middle" style="width: 65px;" href="https://cdc2023.ieeecss.org/" target="_blank">
+          CDC
+        </a>
+     </div>
+
+      <div class="col-sm-11 mt-2 mt-sm-0 p-0 pl-xs-0 pl-sm-4 pr-xs-0 pr-sm-2">
+
+        <div id="lourenco2023CDC" class="col p-0">
+          <h5 class="title mb-0">Diagnosing and Augmenting Feature Representations in Correctional Inverse Reinforcement Learning</h5>
+          <div class="author">
+
+              <nobr><a href="https://www.kth.se/profile/ineslo" target="_blank">Inês Lourenço</a>,</nobr>
+
+              <nobr><em>Andreea Bobu</em>,</nobr>
+
+             <nobr><a href="https://www.kth.se/profile/crro" target="_blank">Cristian R. Rojas</a>,</nobr>
+
+                                        and
+
+              <nobr><a href="https://www.kth.se/profile/bo" target="_blank">Bo Wahlberg</a>.</nobr>
+
+          </div>
+
+          <div>
+            <p class="periodical font-italic">
+              Conference on Decision and Control (CDC), 2023
+            </p>
+          </div>
+
+          <div class="col p-0">
+
+              <a class="badge grey waves-effect font-weight-light mr-1" data-toggle="collapse" href="#lourenco2023CDC-abstract" role="button" aria-expanded="false" aria-controls="lourenco2023CDC-abstract">Abstract</a>
+
+              <a class="badge grey waves-effect font-weight-light mr-1" href="https://arxiv.org/pdf/2304.05238.pdf" target="_blank">PDF</a>
+
+
+          </div>
+
+          <div class="col mt-2 p-0">
+            <div id="lourenco2023CDC-abstract" class="collapse">
+                <div class="abstract card card-body font-weight-light mr-0 mr-sm-3 p-3">
+                    Robots have been increasingly better at doing tasks for humans by learning from their feedback, but still often suffer from model misalignment due to missing or incorrectly learned features.
+                    When the features the robot needs to learn to perform its task are missing or do not generalize well to new settings, the robot will not be able to learn the task the human wants and, even worse, may learn a completely different and undesired behavior.
+                    Prior work shows how the robot can detect when its representation is missing some feature and can, thus, ask the human to be taught about the new feature; however, these works do not differentiate between features that are completely missing and those that exist but do not generalize to new environments.
+                    In the latter case, the robot would detect misalignment and simply learn a new feature, leading to an arbitrarily growing feature representation that can, in turn, lead to spurious correlations and incorrect learning down the line.
+                    In this work, we propose separating the two sources of misalignment: we propose a framework for determining whether a feature the robot needs is incorrectly learned and does not generalize to new environment setups vs. is entirely missing from the robot's representation.
+                    Once we detect the source of error, we show how the human can initiate the realignment process for the model: if the feature is missing, we follow prior work for learning new features; however, if the feature exists but does not generalize, we use data augmentation to expand its training and, thus, complete the correction.
+                    We demonstrate the proposed approach in experiments with a simulated 7DoF robot manipulator and physical human corrections.
+                </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+</li>
+
+  <li><div class="row m-0 mt-3 p-0">
+     <div class="col-sm-1 p-0 abbr">
+        <a class="badge font-weight-bold light-blue darken-1 align-middle" style="width: 65px;" href="https://icml.cc/" target="_blank">
+          ICML
+        </a>
+     </div>
+
+      <div class="col-sm-11 mt-2 mt-sm-0 p-0 pl-xs-0 pl-sm-4 pr-xs-0 pr-sm-2">
+
+        <div id="peng2023ICML" class="col p-0">
+          <h5 class="title mb-0">Diagnosis, Feedback, Adaptation: A Human-in-the-Loop Framework for Test-Time Policy Adaptation</h5>
+          <div class="author">
+
+              <nobr><a href="https://andipeng.com/" target="_blank">Andi Peng</a>,</nobr>
+
+              <nobr><a href="https://avivne.github.io/" target="_blank">Aviv Netanyahu</a>,</nobr>
+
+              <nobr><a href="https://markkho.github.io/" target="_blank">Mark K. Ho</a>,</nobr>
+
+              <nobr><a href="https://www.tshu.io/" target="_blank">Tianmin Shu</a>,</nobr>
+
+              <nobr><em>Andreea Bobu</em>,</nobr>
+
+             <nobr><a href="https://interactive.mit.edu/about/people/julie" target="_blank">Julie Shah</a>,</nobr>
+
+                                        and
+
+              <nobr><a href="https://people.csail.mit.edu/pulkitag/" target="_blank">Pulkit Agrawal</a>.</nobr>
+
+          </div>
+
+          <div>
+            <p class="periodical font-italic">
+              International Conference on Machine Learning (ICML), 2023
+            </p>
+          </div>
+
+          <div class="col p-0">
+
+              <a class="badge grey waves-effect font-weight-light mr-1" data-toggle="collapse" href="#peng2023ICML-abstract" role="button" aria-expanded="false" aria-controls="peng2023ICML-abstract">Abstract</a>
+
+              <a class="badge grey waves-effect font-weight-light mr-1" href="https://openreview.net/pdf?id=rFLtREMkTR" target="_blank">PDF</a>
+
+          </div>
+
+          <div class="col mt-2 p-0">
+            <div id="peng2023ICML-abstract" class="collapse">
+                <div class="abstract card card-body font-weight-light mr-0 mr-sm-3 p-3">
+                  Policies often fail at test-time due to distribution shifts---changes in the state and reward that occur when an end user deploys the policy in environments different from those seen in training.
+                  Data augmentation can help models be more robust to such shifts by varying specific concepts in the state, e.g. object color, that are task-irrelevant and should not impact desired actions.
+                  However, designers training the agent don't often know which concepts are irrelevant a priori.
+                  We propose a human-in-the-loop framework to leverage feedback from the end user to quickly identify and augment task-irrelevant visual state concepts.
+                  Our framework generates counterfactual demonstrations that allow users to quickly isolate shifted state concepts and identify if they should not impact the desired task, and can therefore be augmented using existing actions.
+                  We present experiments validating our full pipeline on discrete and continuous control tasks with real human users.
+                  Our method better enables users to (1) understand agent failure, (2) improve sample efficiency of demonstrations required for finetuning, and (3) adapt the agent to their desired reward.
+                </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+</li>
+
+
+		<li><div class="row m-0 mt-3 p-0">
+			 <div class="col-sm-1 p-0 abbr">
+        <a class="badge font-weight-bold light-blue darken-1 align-middle" style="width: 65px;" href="https://humanrobotinteraction.org/2023/" target="_blank">
+          HRI
+        </a>
+			</div>
+  <div class="col-sm-11 mt-2 mt-sm-0 p-0 pl-xs-0 pl-sm-4 pr-xs-0 pr-sm-2">
+
+    <div id="bobu2023HRI" class="col p-0">
+      <h5 class="title mb-0">SIRL: Similarity-based Implicit Representation Learning</h5>
+      <div class="author">
+
+									<nobr><em>Andreea Bobu*</em>,</nobr>
+
+                  <nobr><a href="https://www.linkedin.com/in/yiliu77/" target="_blank">Yi Liu<nobr><em>*</em></nobr></a>,</nobr>
+
+                  <nobr><a href="https://rohinshah.com/" target="_blank">Rohin Shah</a>,</nobr>
+
+                  <nobr><a href="https://www.cs.utah.edu/~dsbrown/" target="_blank">Daniel S. Brown</a>,</nobr>
+
+									and
+
+                  <nobr><a href="https://people.eecs.berkeley.edu/~anca/" target="_blank">Anca D. Dragan</a>.</nobr>
+
+      </div>
+
+      <div>
+        <p class="periodical font-italic">
+          ACM/IEEE International Conference on Human Robot Interaction (HRI), 2023
+        </p>
+      </div>
+
+      <div class="col p-0">
+
+          <a class="badge grey waves-effect font-weight-light mr-1" data-toggle="collapse" href="#bobu2023HRI-abstract" role="button" aria-expanded="false" aria-controls="bobu2023HRI-abstract">Abstract</a>
+
+          <a class="badge grey waves-effect font-weight-light mr-1" href="https://dl.acm.org/doi/abs/10.1145/3568162.3576989" target="_blank">PDF</a>
+          <a class="badge grey waves-effect font-weight-light mr-1" href="https://youtu.be/T5Q4-Vxqbo4" target="_blank">Talk</a>
+
+      </div>
+
+      <div class="col mt-2 p-0">
+        <div id="bobu2023HRI-abstract" class="collapse">
+          <div class="abstract card card-body font-weight-light mr-0 mr-sm-3 p-3">
+              When robots learn reward functions using high capacity models that take raw state directly as input, they need to both learn a representation for what matters in the task -- the task "features" -- as well as how to combine these features into a single objective.
+              If they try to do both at once from input designed to teach the full reward function, it is easy to end up with a representation that contains spurious correlations in the data, which fails to generalize to new settings.
+              Instead, our ultimate goal is to enable robots to identify and isolate the causal features that people actually care about and use when they represent states and behavior.
+              Our idea is that we can tune into this representation by asking users what behaviors they consider similar: behaviors will be similar if the features that matter are similar, even if low-level behavior is different; conversely, behaviors will be different if even one of the features that matter differs.
+              This, in turn, is what enables the robot to disambiguate between what needs to go into the representation versus what is spurious, as well as what aspects of behavior can be compressed together versus not. The notion of learning representations based on similarity has a nice parallel in contrastive learning, a self-supervised representation learning technique that maps visually similar data points to similar embeddings, where similarity is defined by a designer through data augmentation heuristics. By contrast, in order to learn the representations that people use, so we can learn their preferences and objectives, we use their definition of similarity. In simulation as well as in a user study, we show that learning through such similarity queries leads to representations that, while far from perfect, are indeed more generalizable than self-supervised and task-input alternatives.          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+</li>
+
+      </ol>
+    </div>
+  </div>
+
+
+
+<div class="row m-0 p-0" style="border-top: 1px solid #ddd; flex-direction: row-reverse;">
+    <div class="col-sm-1 mt-2 p-0 pr-1">
       <h3 class="bibliography-year">2022</h3>
     </div>
     <div class="col-sm-11 p-0">
       <ol class="bibliography">
-	
 
-		<li><div class="row m-0 mt-3 p-0">
-			 <div class="col-sm-1 p-0 abbr">
-        <a class="badge font-weight-bold light-blue darken-1 align-middle" style="width: 65px;" href="https://arxiv.org/" target="_blank">
-          arXiv
+
+<li><div class="row m-0 mt-3 p-0">
+	<div class="col-sm-1 p-0 abbr">
+        <a class="badge font-weight-bold light-blue darken-1 align-middle" style="width: 65px;" href="https://neurips-hill.github.io/" target="_blank">
+          HILL
+        </a>
+			</div>
+  <div class="col-sm-11 mt-2 mt-sm-0 p-0 pl-xs-0 pl-sm-4 pr-xs-0 pr-sm-2">
+
+    <div id="zhang2022NeurIPSw" class="col p-0">
+      <h5 class="title mb-0">Time-Efficient Reward Learning via Visually Assisted Cluster Ranking</h5>
+      <div class="author">
+
+                  <nobr><a href="https://www.linkedin.com/in/davidzhang501/" target="_blank">David Zhang</a>,</nobr>
+
+                  <nobr><a href="https://micahcarroll.github.io/" target="_blank">Micah Carroll</a>,</nobr>
+
+							<nobr><em>Andreea Bobu</em>,</nobr>
+
+									and
+
+                  <nobr><a href="https://people.eecs.berkeley.edu/~anca/" target="_blank">Anca D. Dragan</a>.</nobr>
+
+      </div>
+
+      <div>
+        <p class="periodical font-italic">
+        Workshop on Workshop on Human in the Loop Learning, NeurIPS 2022
+        </p>
+      </div>
+
+      <div class="col p-0">
+
+          <a class="badge grey waves-effect font-weight-light mr-1" data-toggle="collapse" href="#zhang2022NeurIPSw-abstract" role="button" aria-expanded="false" aria-controls="zhang2022NeurIPSw-abstract">Abstract</a>
+
+          <a class="badge grey waves-effect font-weight-light mr-1" href="https://arxiv.org/abs/2212.00169" target="_blank">PDF</a>
+          <a class="badge grey waves-effect font-weight-light mr-1" href="https://drive.google.com/drive/u/0/folders/1hxsVqD940LMYfGusKe5SB3AXtQJNcH9l" target="_blank">Video</a>
+      </div>
+
+      <div class="col mt-2 p-0">
+        <div id="zhang2022NeurIPSw-abstract" class="collapse">
+          <div class="abstract card card-body font-weight-light mr-0 mr-sm-3 p-3">
+	    One of the most successful paradigms for reward learning uses human feedback in the form of comparisons.
+              Although these methods hold promise, human comparison labeling is expensive and time consuming, constituting a major bottleneck to their broader applicability.
+              Our insight is that we can greatly improve how effectively human time is used in these approaches by batching comparisons together, rather than having the human label each comparison individually.
+              To do so, we leverage data dimensionality-reduction and visualization techniques to provide the human with a interactive GUI displaying the state space, in which the user can label subportions of the state space.
+              Across some simple Mujoco tasks, we show that this high-level approach holds promise and is able to greatly increase the performance of the resulting agents, provided the same amount of human labeling time.
+	</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+</li>
+
+
+<li><div class="row m-0 mt-3 p-0">
+	<div class="col-sm-1 p-0 abbr">
+        <a class="badge font-weight-bold light-blue darken-1 align-middle" style="width: 65px;" href="https://www.cobot-wotf-workshop.com/accepted-papers" target="_blank">
+          CoR-WotF
         </a>
 			</div>
   <div class="col-sm-11 mt-2 mt-sm-0 p-0 pl-xs-0 pl-sm-4 pr-xs-0 pr-sm-2">
     
-    <div id="bobu2022ICRA" class="col p-0">
+    <div id="bobu2022ICRAw" class="col p-0">
+      <h5 class="title mb-0">Aligning Robot Representations with Humans</h5>
+      <div class="author">
+                
+							<nobr><em>Andreea Bobu</em></nobr>              
+                
+									and
+                
+                  <nobr><a href="https://andipeng.com/" target="_blank">Andi Peng</a>.</nobr>
+        
+      </div>
+
+      <div>
+        <p class="periodical font-italic">
+        Workshop on Collaborative Robots and the Work of the Future, ICRA 2022
+        </p>
+      </div>
+    
+      <div class="col p-0">
+        
+          <a class="badge grey waves-effect font-weight-light mr-1" data-toggle="collapse" href="#bobu2022ICRAw-abstract" role="button" aria-expanded="false" aria-controls="bobu2022ICRAw-abstract">Abstract</a>
+        
+          <a class="badge grey waves-effect font-weight-light mr-1" href="/assets/pdf/jobvision/bobu2022ICRAw.pdf" target="_blank">PDF</a>
+          <a class="badge grey waves-effect font-weight-light mr-1" href="https://drive.google.com/file/d/1KydXhKeX9bBOUbnkPkQZjTsao0XqcrEw/view" target="_blank">Video</a>
+
+          <a class="badge grey waves-effect font-weight-light mr-1" href="/assets/pdf/jobvision/bobu2022ICRAw_poster.pdf" target="_blank">Poster</a>
+      </div>
+    
+      <div class="col mt-2 p-0">
+        <div id="bobu2022ICRAw-abstract" class="collapse">
+          <div class="abstract card card-body font-weight-light mr-0 mr-sm-3 p-3">
+	As robots are increasingly deployed in real-world scenarios, a key question is how to best transfer knowledge learned in one environment to another, where shifting constraints and human preferences render adaptation challenging. A central challenge remains that often, it is difficult (perhaps even impossible) to capture the full complexity of the deployment environment, and therefore the desired tasks, at training time. Consequently, the representation, or abstraction, of the tasks the human hopes for the robot to perform in one environment may be misaligned with the representation of the tasks that the robot has learned in another. We postulate that because humans will be the ultimate evaluator of system success in the world, they are best suited to communicating the aspects of the tasks that matter to the robot. Our key insight is that effective learning from human input requires first explicitly learning good intermediate representations and then using those representations for solving downstream tasks. We highlight three areas where we can use this approach to build interactive systems and offer future directions of work to better create advanced collaborative robots.
+	</div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+</li>
+
+
+
+<li><div class="row m-0 mt-3 p-0">
+	<div class="col-sm-1 p-0 abbr">
+        <a class="badge font-weight-bold light-blue darken-1 align-middle" style="width: 65px;" href="https://iros2022.org/" target="_blank">
+          IROS
+        </a>
+			</div>
+  <div class="col-sm-11 mt-2 mt-sm-0 p-0 pl-xs-0 pl-sm-4 pr-xs-0 pr-sm-2">
+    
+    <div id="sripathy2022IROS" class="col p-0">
+      <h5 class="title mb-0">Teaching Robots to Span the Space of Functional Expressive Motion</h5>
+      <div class="author">
+                
+                  <nobr><a href="https://www.linkedin.com/in/arjunsripathy" target="_blank">Arjun Sripathy</a>,</nobr>
+		
+							<nobr><em>Andreea Bobu</em>,</nobr>              
+                
+                  <nobr><a href="https://www.linkedin.com/in/zhongyu-li-b2b8aa160/" target="_blank">Zhongyu Li</a>,</nobr>
+
+                  <nobr><a href="https://me.berkeley.edu/people/koushil-sreenath/" target="_blank">Koushil Sreenath</a>,</nobr>
+
+                  <nobr><a href="https://www.cs.utah.edu/~dsbrown/" target="_blank">Daniel S. Brown</a>,</nobr>
+            
+									and
+                
+                  <nobr><a href="https://people.eecs.berkeley.edu/~anca/" target="_blank">Anca D. Dragan</a>.</nobr>
+        
+      </div>
+
+      <div>
+        <p class="periodical font-italic">
+        IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), 2022
+        </p>
+      </div>
+    
+      <div class="col p-0">
+        
+          <a class="badge grey waves-effect font-weight-light mr-1" data-toggle="collapse" href="#sripathy2022IROS-abstract" role="button" aria-expanded="false" aria-controls="sripathy2022IROS-abstract">Abstract</a>
+        
+          <a class="badge grey waves-effect font-weight-light mr-1" href="/assets/pdf/cassie/sripathy2022IROS.pdf" target="_blank">PDF</a>
+          <a class="badge grey waves-effect font-weight-light mr-1" href="https://arjunsripathy.github.io/robot_emotive_space/" target="_blank">Project Website</a>
+          <a class="badge grey waves-effect font-weight-light mr-1" href="https://github.com/arjunsripathy/robot_emotive_space" target="_blank">Code</a>
+          <a class="badge grey waves-effect font-weight-light mr-1" href="https://www.youtube.com/watch?v=k8pMq4WcEgQ&t=3s&ab_channel=ArjunSripathy" target="_blank">Video</a>
+        
+      </div>
+    
+      <div class="col mt-2 p-0">
+        <div id="sripathy2022IROS-abstract" class="collapse">
+          <div class="abstract card card-body font-weight-light mr-0 mr-sm-3 p-3">
+        Our goal is to enable robots to perform functional tasks in emotive ways, be it in response to their users' emotional states, or expressive of their confidence levels. Prior work has proposed learning independent cost functions from user feedback for each target emotion, so that the robot may optimize it alongside task and environment specific objectives for any situation it encounters. However, this approach is inefficient when modeling multiple emotions and unable to generalize to new ones. In this work, we leverage the fact that emotions are not independent of each other: they are related through a latent space of Valence-Arousal-Dominance (VAD). Our key idea is to learn a model for how trajectories map onto VAD with user labels. Considering the distance between a trajectory's mapping and a target VAD allows this single model to represent cost functions for all emotions. As a result 1) all user feedback can contribute to learning about every emotion; 2) the robot can generate trajectories for any emotion in the space instead of only a few predefined ones; and 3) the robot can respond emotively to user-generated natural language by mapping it to a target VAD. We introduce a method that interactively learns to map trajectories to this latent space and test it in simulation and in a user study. In experiments, we use a simple vacuum robot as well as the Cassie biped.  
+	</div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+</li>
+
+
+
+		<li><div class="row m-0 mt-3 p-0">
+			 <div class="col-sm-1 p-0 abbr">
+        <a class="badge font-weight-bold light-blue darken-1 align-middle" style="width: 65px;" href="https://www.ieee-ras.org/publications/ra-l" target="_blank">
+          RA-L
+        </a>
+			</div>
+  <div class="col-sm-11 mt-2 mt-sm-0 p-0 pl-xs-0 pl-sm-4 pr-xs-0 pr-sm-2">
+    
+    <div id="bobu2022RAL" class="col p-0">
       <h5 class="title mb-0">Learning Perceptual Concepts by Bootstrapping from Human Queries</h5>
       <div class="author">
                 
@@ -144,23 +506,26 @@
 
       <div>
         <p class="periodical font-italic">
-        ArXiv Preprint, 2022
+        IEEE Robotics and Automation Letters (RA-L), 2022
         </p>
       </div>
     
       <div class="col p-0">
         
-          <a class="badge grey waves-effect font-weight-light mr-1" data-toggle="collapse" href="#bobu2022ICRA-abstract" role="button" aria-expanded="false" aria-controls="bobu2022ICRA-abstract">Abstract</a>
+          <a class="badge grey waves-effect font-weight-light mr-1" data-toggle="collapse" href="#bobu2022RAL-abstract" role="button" aria-expanded="false" aria-controls="bobu2022RAL-abstract">Abstract</a>
         
-          <a class="badge grey waves-effect font-weight-light mr-1" href="/assets/pdf/NVIDIA/bobu2022ICRA.pdf" target="_blank">PDF</a>
+          <a class="badge grey waves-effect font-weight-light mr-1" href="/assets/pdf/NVIDIA/bobu2022RAL.pdf" target="_blank">PDF</a>
           <a class="badge grey waves-effect font-weight-light mr-1" href="https://sites.google.com/nvidia.com/active-concept-learning" target="_blank">Project Website</a>
-        
+          <a class="badge grey waves-effect font-weight-light mr-1" href="https://github.com/andreea7b/concept_learning" target="_blank">Code</a>
+          <a class="badge grey waves-effect font-weight-light mr-1" href="https://www.youtube.com/watch?v=LszKCwmOle8&feature=youtu.be&ab_channel=AndreeaBobu" target="_blank">Video</a>
+          <a class="badge grey waves-effect font-weight-light mr-1" href="/assets/pdf/NVIDIA/bobu2022RAL_poster.pdf" target="_blank">Poster</a>
+          <a class="badge grey waves-effect font-weight-light mr-1" href="https://patents.google.com/patent/US20230145208A1/en" target="_blank">Patent</a>
       </div>
     
       <div class="col mt-2 p-0">
-        <div id="bobu2022ICRA-abstract" class="collapse">
+        <div id="bobu2022RAL-abstract" class="collapse">
           <div class="abstract card card-body font-weight-light mr-0 mr-sm-3 p-3">
-	Robots need to be able to learn concepts from their users in order to adapt their capabilities to each user’s unique task. But when the robot operates on high-dimensional inputs, like images or point clouds, this is impractical: the robot needs an unrealistic amount of human effort to learn the new concept. To address this challenge, we propose a new approach whereby the robot learns a low-dimensional variant of the concept and uses it to generate a larger data set for learning the concept in the high-dimensional space.  This lets it take advantage of semantically meaningful privileged information only accessible at training time, like object poses and bounding boxes, that allows for richer human interaction to speed up learning. We evaluate our approach by learning prepositional concepts that describe object state or multi-object relationships, like above, near, or aligned, which are key to user specification of task goals and execution constraints for robots. Using a simulated human, we show that our approach improves sample complexity when compared to learning concepts directly in the high-dimensional space. We also demonstrate the utility of the learned concepts in motion planning tasks on a 7-DoF Franka robot.
+Most robot tasks can be thought of as relating one or more objects, and learning new tasks by necessity involves teaching the robot new concepts relating objects to one another. However, learning new concepts that operate on high-dimensional data – like that coming from a robot’s sensors – is impractical, because it requires an unrealistic amount of labeled human input. In this work, we observe that by using a simulator at training time we can get access to significant privileged information – things like object poses and bounding boxes – that allows for learning a low-dimensional variant of the concept with much less human input. The robot can then use this low-dimensional concept to automatically label large amounts of high-dimensional data in the simulator. This enables learning perceptual concepts that work with real sensor input where no privileged information is available. We evaluate our Perceptual Concept Bootstrapping (PCB) approach by learning spatial concepts that describe object state or multi-object relationships. We show that our approach improves sample complexity when compared to learning concepts directly in the high-dimensional space. We also demonstrate the utility of the learned concepts in motion planning tasks on a 7-DoF Franka Panda robot.
 	</div>
         </div>
       </div>
@@ -198,7 +563,7 @@
 
       <div>
         <p class="periodical font-italic">
-          The International Journal of Robotics Research
+          The International Journal of Robotics Research (IJRR)
         </p>
       </div>
     
@@ -259,7 +624,7 @@
 		
 							<nobr><em>Andreea Bobu*</em>,</nobr>              
                 
-                  <nobr><a href="https://people.eecs.berkeley.edu/~dsbrown/" target="_blank">Daniel S. Brown</a>,</nobr>
+                  <nobr><a href="https://www.cs.utah.edu/~dsbrown/" target="_blank">Daniel S. Brown</a>,</nobr>
             
 									and
                 
@@ -312,7 +677,7 @@
 		
 							<nobr><em>Andreea Bobu*</em>,</nobr>              
                 
-                  <nobr><a href="https://people.eecs.berkeley.edu/~dsbrown/" target="_blank">Daniel S. Brown</a>,</nobr>
+                  <nobr><a href="https://www.cs.utah.edu/~dsbrown/" target="_blank">Daniel S. Brown</a>,</nobr>
             
 									and
                 
@@ -394,6 +759,8 @@
           <a class="badge grey waves-effect font-weight-light mr-1" href="https://sites.google.com/view/feature-learning" target="_blank">Project Website</a>
           <a class="badge grey waves-effect font-weight-light mr-1" href="https://github.com/andreea7b/FERL" target="_blank">Code</a>
 	  <a class="badge grey waves-effect font-weight-light mr-1" href="https://www.youtube.com/watch?v=NaD-eVri8r4&ab_channel=InterACTLab" target="_blank">Talk</a>
+
+          <a class="badge grey waves-effect font-weight-light mr-1" href="/assets/pdf/FERL/bobu2021HRI_poster.pdf" target="_blank">Poster</a>
           
       </div>
     
@@ -465,6 +832,8 @@
           <a class="badge grey waves-effect font-weight-light mr-1" href="/assets/pdf/less/bobu2020HRI.pdf" target="_blank">PDF</a>
           <a class="badge grey waves-effect font-weight-light mr-1" href="https://sites.google.com/view/less-human-decision-model" target="_blank">Project Website</a>
 	        <a class="badge grey waves-effect font-weight-light mr-1" href="https://www.youtube.com/watch?v=xa_l5HeyVgw" target="_blank">Talk</a>
+
+          <a class="badge grey waves-effect font-weight-light mr-1" href="/assets/pdf/less/bobu2020HRI_poster.pdf" target="_blank">Poster</a>
         
       </div>
     
@@ -485,7 +854,7 @@
 <li><div class="row m-0 mt-3 p-0">
 			 <div class="col-sm-1 p-0 abbr">
         <a class="badge font-weight-bold light-blue darken-1 align-middle" style="width: 65px;" href="http://www.hripioneers.info/hri20/index.html" target="_blank">
-          HRI
+          Pioneers
         </a>
 			</div>
   <div class="col-sm-11 mt-2 mt-sm-0 p-0 pl-xs-0 pl-sm-4 pr-xs-0 pr-sm-2">
@@ -509,6 +878,8 @@
           <a class="badge grey waves-effect font-weight-light mr-1" data-toggle="collapse" href="#bobu2020HRIpioneers-abstract" role="button" aria-expanded="false" aria-controls="bobu2020HRIpioneers-abstract">Abstract</a>
         
           <a class="badge grey waves-effect font-weight-light mr-1" href="/assets/pdf/lumos/bobu2020HRIpioneers.pdf" target="_blank">PDF</a>
+
+          <a class="badge grey waves-effect font-weight-light mr-1" href="/assets/pdf/lumos/bobu2020HRIpioneers_poster.pdf" target="_blank">Poster</a>
         
       </div>
     
@@ -633,7 +1004,7 @@
         <p class="periodical font-italic">
           Conference on Robot Learning (CoRL), 2018
           <br>
-          <nobr><em>Invited to Special Issue</em></nobr>
+          <nobr><em style="color:orange;">Invited to Special Issue</em></nobr>
         </p>
       </div>
     
@@ -733,7 +1104,7 @@
 		<li><div class="row m-0 mt-3 p-0">
 			 <div class="col-sm-1 p-0 abbr">
         <a class="badge font-weight-bold light-blue darken-1 align-middle" style="width: 65px;" href="https://www.miccai2016.org/en/" target="_blank">
-          MICCAI
+          Patch-MI
         </a>
 			</div>
   <div class="col-sm-11 mt-2 mt-sm-0 p-0 pl-xs-0 pl-sm-4 pr-xs-0 pr-sm-2">
