@@ -131,13 +131,13 @@ document.write('<p><font color="gray" size="1">Photo credit: '+theCredits[whichI
   <div class="content">
 		<div class="col p-0 pt-4 pb-4">
 			<h1 class="pb-3 title text-left font-weight-bold">Andreea Bobu</h1>
-			<h6 class="m-0 mb-2" style="font-size: 0.83em;"><a href="http://bair.berkeley.edu/" class="page-description" target="_blank">Berkeley Artificial Intelligence Research</a></h6>  
-			<h6 class="m-0 mb-2" style="font-size: 0.83em;"><a href="https://eecs.berkeley.edu/" class="page-description" target="_blank">Electrical Engineering and Computer Science</a></h6> 
-			<h6 class="m-0 mb-2" style="font-size: 0.83em;"><a href="http://www.berkeley.edu/" class="page-description" target="_blank">University of California Berkeley</a></h6>
-      <h6 class="m-0 mb-2" style="font-size: 0.83em;"><a href="https://goo.gl/maps/Ho7XEPBpseEpa4UP7" class="page-description" target="_blank">8043-5 Berkeley Way West, 2121 Berkeley Way, Berkeley, CA 94704</a></h6>
+			<h6 class="m-0 mb-2" style="font-size: 0.83em;"><a href="https://theaiinstitute.com/" class="page-description" target="_blank">Boston Dynamics AI Institute</a></h6>
+<!--			<h6 class="m-0 mb-2" style="font-size: 0.83em;"><a href="https://eecs.berkeley.edu/" class="page-description" target="_blank">Electrical Engineering and Computer Science</a></h6> -->
+<!--			<h6 class="m-0 mb-2" style="font-size: 0.83em;"><a href="http://www.berkeley.edu/" class="page-description" target="_blank">University of California Berkeley</a></h6>-->
+      <h6 class="m-0 mb-2" style="font-size: 0.83em;"><a href="https://goo.gl/maps/YczL2ZmiV4RdwGy29" class="page-description" target="_blank">145 Broadway, Cambridge, MA 02142</a></h6>
   
 		<div style="position: absolute; float: right; right:5px; top:90px">
-         <img src="/assets/img/UCB_logos_horizontal.png" align="middle" width="360" height="80" />
+         <img src="/assets/img/MIT_BDAII.png" align="middle" width="360" height="80" />
 		</div>
 
 
@@ -156,8 +156,7 @@ document.write('<p><font color="gray" size="1">Photo credit: '+theCredits[whichI
         </p>
 
         <p>
-					I am a Ph.D. candidate at <a href="http://www.berkeley.edu/" class="page-description" target="_blank">UC Berkeley</a> in EECS, where I am advised by&nbsp;<a href="http://people.eecs.berkeley.edu/~anca/" target="_blank">Anca Dragan</a> in the&nbsp;<a href="http://interact.berkeley.edu/" target="_blank">InterACT Lab</a>.
-                    My Ph.D. is supported by the Apple AI/ML Fellowship. I previously received a B.S. in Computer Science and Engineering at MIT in 2017.
+			I am a Research Scientist at the Boston Dynamics AI Institute. I obtained my Ph.D. in Electrical Engineering and Computer Science at <a href="http://www.berkeley.edu/" class="page-description" target="_blank">UC Berkeley</a> with&nbsp;<a href="http://people.eecs.berkeley.edu/~anca/" target="_blank">Anca Dragan</a>. Previously, I received a B.S. in Computer Science and Engineering at MIT in 2017.
 
 <!--					My interests lie at the intersection of robotics, machine learning, and human-robot interaction, with a focus in robot learning with uncertainty.-->
 <!--				  In my research, I tackle ways in which autonomous systems’ models of the world and of other agents (e.g. humans) can go wrong, and improve them for enhanced interaction between people and robots.  -->
@@ -969,6 +968,7 @@ document.write('<p><font color="gray" size="1">Photo credit: '+theCredits[whichI
           value = getValue();
           width = (value/max) * 100;
           width = width + '%';
+          return width;
           return width;
         }
         var setWidth = function() { progressBar.css({ width: getWidth() }); };
