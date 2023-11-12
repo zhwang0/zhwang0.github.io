@@ -22,11 +22,11 @@
 var theImages = new Array()
 var theCredits = new Array()
 
-theImages[0] = 'assets/img/abobu1.jpg'
-theImages[1] = 'assets/img/abobu2.jpg'
+theImages[0] = 'assets/img/wang1.jpg'
+theImages[1] = 'assets/img/wang2.jpg'
 
-theCredits[0] = 'Adrian Dalca'
-theCredits[1] = 'Andrea Bajcsy'
+theCredits[0] = 'OSU'
+theCredits[1] = 'UMD'
 
 // do not edit anything below this line
 
