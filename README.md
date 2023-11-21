@@ -1,5 +1,6 @@
+You can find my personal website [here](https://zhwang0.github.io), which is powered by [Jekyll](https://jekyllrb.com/) and [al-folio](https://github.com/alshedivat/al-folio) and forked from [Andreea Bobu](https://andreea7b.github.io/).
+
 # al-folio
-You can find my personal website [here](https://zhwang0.github.io).
 
 A simple and clean [Jekyll](https://jekyllrb.com/) theme for academics.
 
