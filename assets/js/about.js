@@ -35,8 +35,7 @@
     toggle.setAttribute("aria-expanded", "false");
     toggle.innerHTML = '<span>Show earlier news</span><i class="fas fa-chevron-down" aria-hidden="true"></i>';
 
-    var visitorMap = news.querySelector(".visitor-map");
-    news.insertBefore(toggle, visitorMap || null);
+    news.appendChild(toggle);
 
     toggle.addEventListener("click", function () {
       var expanded = toggle.getAttribute("aria-expanded") === "true";
@@ -45,15 +44,17 @@
       });
       toggle.setAttribute("aria-expanded", String(!expanded));
       toggle.querySelector("span").textContent = expanded ? "Show earlier news" : "Hide earlier news";
+      window.dispatchEvent(new Event("resize"));
     });
   }
 
   function loadPublications() {
     var publications = document.getElementById("publications");
     var loading = publications ? publications.querySelector(".publication-loading") : null;
-    if (!publications || !loading) {
+    if (!publications || !loading || publications.getAttribute("data-load-started") === "true") {
       return;
     }
+    publications.setAttribute("data-load-started", "true");
 
     fetch("/publications/")
       .then(function (response) {
@@ -79,18 +80,52 @@
         publications.setAttribute("aria-busy", "false");
         secureExternalLinks(publications);
 
-        if (window.location.hash.indexOf("#year-") === 0) {
+        if (window.location.hash === "#publications") {
+          publications.scrollIntoView();
+        } else if (window.location.hash.indexOf("#year-") === 0) {
           var target = document.querySelector(window.location.hash);
           if (target) {
             target.scrollIntoView();
           }
         }
+        window.dispatchEvent(new Event("resize"));
       })
       .catch(function () {
         loading.classList.add("publication-loading-error");
         loading.innerHTML = 'The publication archive could not be loaded. <a href="/publications/">Open the publications page</a>.';
         publications.setAttribute("aria-busy", "false");
+        window.dispatchEvent(new Event("resize"));
       });
+  }
+
+  function observeOnce(element, callback, rootMargin) {
+    if (!("IntersectionObserver" in window)) {
+      callback();
+      return;
+    }
+
+    var observer = new IntersectionObserver(function (entries) {
+      if (entries.some(function (entry) { return entry.isIntersecting; })) {
+        observer.disconnect();
+        callback();
+      }
+    }, { rootMargin: rootMargin || "400px 0px" });
+
+    observer.observe(element);
+  }
+
+  function deferPublications() {
+    var publications = document.getElementById("publications");
+    if (!publications) {
+      return;
+    }
+
+    if (window.location.hash === "#publications" || window.location.hash.indexOf("#year-") === 0) {
+      loadPublications();
+      return;
+    }
+
+    observeOnce(publications, loadPublications, "700px 0px");
   }
 
   function initSectionNavigation() {
@@ -128,6 +163,6 @@
 
   secureExternalLinks(page);
   enhanceNews();
-  loadPublications();
+  deferPublications();
   initSectionNavigation();
 })();
