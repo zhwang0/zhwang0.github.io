@@ -129,6 +129,151 @@
 
 <div class="row m-0 p-0" style="border-top: 1px solid #ddd; flex-direction: row-reverse;">
     <div class="col-sm-1 mt-2 p-0 pr-1">
+      <h3 class="bibliography-year">2026</h3>
+    </div>
+    <div class="col-sm-11 p-0">
+      <ol class="bibliography">
+
+        <li><div class="row m-0 mt-3 p-0">
+          <div class="col-sm-1 p-0 abbr">
+             <a class="badge font-weight-bold light-blue darken-1 align-middle" style="width: 75px;" href="https://sigspatial2026.sigspatial.org/" target="_blank">
+               SIGSPATIAL
+             </a>
+          </div>
+
+           <div class="col-sm-11 mt-2 mt-sm-0 p-0 pl-xs-0 pl-sm-5 pr-xs-0 pr-sm-2">
+
+             <div id="sigspatial26-earth-system-world-model" class="col p-0">
+               <h5 class="title mb-0">Earth System World Model for What-If Simulations: A Case Study for Terrestrial Ecosystems</h5>
+               <div class="author">
+                   <nobr><em style="color: black;">Zhihao Wang</em>,</nobr>
+                   <nobr>Ruichen Wang,</nobr>
+                   <nobr>Ruohan Li,</nobr>
+                   <nobr>Lei Ma,</nobr>
+                   <nobr>George Hurtt,</nobr>
+                   <nobr>Xiaowei Jia,</nobr>
+                   <nobr>Gengchen Mai,</nobr>
+                   <nobr>Shaowen Wang,</nobr>
+                    and
+                   <nobr>Yiqun Xie.</nobr>
+               </div>
+
+               <div>
+                 <p class="periodical font-italic">
+                  ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems (SIGSPATIAL'26). 2026.
+                 </p>
+               </div>
+
+               <div class="col p-0">
+                 <a class="badge grey waves-effect font-weight-light mr-1" data-toggle="collapse" href="#sigspatial26-earth-system-world-model-abstract" role="button" aria-expanded="false" aria-controls="sigspatial26-earth-system-world-model-abstract">Abstract</a>
+               </div>
+               <div class="col mt-2 p-0">
+                 <div id="sigspatial26-earth-system-world-model-abstract" class="collapse">
+                   <div class="abstract card card-body font-weight-light mr-0 mr-sm-3 p-3">
+                    Machine learning emulators have become essential for accelerating expensive Earth-system simulations, but most existing approaches remain passive forecasters: they reproduce simulator trajectories under prescribed forcings without an explicit interaction mechanism for user-specified interventions. This limits their use in interactive scientific workflows and Earth-system digital twins, where users often need to explore how a system would respond if selected state components were changed. We propose an action-conditioned world-modeling framework for Earth-system emulation that reformulates simulator trajectories as supervision for controllable state-transition learning. The key idea is transition-action pretraining: naturally observed state changes are treated as label-free action supervision, allowing the model to learn both prescribed dynamics and action-conditioned responses without manually annotated interventions. We further introduce masked response learning, which requires the model to infer unobserved variables under partial state edits and encourages learning of coupled system dependencies. We instantiate this framework on ecosystem dynamics across six heterogeneous global regions and multiple stand ages. Experiments show that the model preserves competitive long-horizon emulation accuracy while enabling controllable structural interventions and coherent responses in coupled carbon-cycle variables. These results suggest a practical route from passive Earth-system emulators toward interactive, intervention-aware scientific surrogates.
+                   </div>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </div></li>
+
+        <li><div class="row m-0 mt-3 p-0">
+          <div class="col-sm-1 p-0 abbr">
+             <a class="badge font-weight-bold light-blue darken-1 align-middle" style="width: 75px;" href="https://sigspatial2026.sigspatial.org/" target="_blank">
+               SIGSPATIAL
+             </a>
+          </div>
+
+           <div class="col-sm-11 mt-2 mt-sm-0 p-0 pl-xs-0 pl-sm-5 pr-xs-0 pr-sm-2">
+
+             <div id="fast-ecodiffusion" class="col p-0">
+               <h5 class="title mb-0">Fast-EcoDiffusion: Scalable Uncertainty-Aware Emulation of Ecosystem Processes via Latent Diffusion Models</h5>
+               <div class="author">
+                   <nobr>Ruohan Li,</nobr>
+                   <nobr><em style="color: black;">Zhihao Wang</em>,</nobr>
+                   <nobr>Shuo Xu,</nobr>
+                   <nobr>Zhili Li,</nobr>
+                   <nobr>Ruichen Wang,</nobr>
+                   <nobr>Lei Ma,</nobr>
+                   <nobr>George Hurtt,</nobr>
+                   <nobr>Xiaowei Jia,</nobr>
+                   <nobr>Gengchen Mai,</nobr>
+                    and
+                   <nobr>Yiqun Xie.</nobr>
+               </div>
+
+               <div>
+                 <p class="periodical font-italic">
+                  ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems (SIGSPATIAL'26). 2026.
+                 </p>
+               </div>
+
+               <div class="col p-0">
+                 <a class="badge grey waves-effect font-weight-light mr-1" data-toggle="collapse" href="#fast-ecodiffusion-abstract" role="button" aria-expanded="false" aria-controls="fast-ecodiffusion-abstract">Abstract</a>
+               </div>
+               <div class="col mt-2 p-0">
+                 <div id="fast-ecodiffusion-abstract" class="collapse">
+                   <div class="abstract card card-body font-weight-light mr-0 mr-sm-3 p-3">
+                    Process-based ecosystem models, such as the Ecosystem Demography (ED) model, provide physically grounded simulations of vegetation structure, carbon cycling, hydrology, and ecological succession. However, their high computational cost limits their use in large-scale, high-resolution, long-term, and multi-scenario applications. AI-based emulators offer a promising solution by learning fast approximations of process-based models, yet most existing ecosystem emulators are deterministic and do not explicitly represent predictive uncertainty. Diffusion-based emulators, such as EcoDiffusion, improve uncertainty-aware ecosystem prediction but remain computationally expensive. To address this speed–uncertainty trade-off, we propose Fast-EcoDiffusion, a latent-space conditional diffusion framework for efficient probabilistic ED emulation. Fast-EcoDiffusion learns a temporally aligned latent representation of ecosystem trajectories and performs diffusion in the compressed latent space, while still conditioning on the corresponding future environmental forcings and initial ecosystem states. This design allows the model to reduce the denoising cost for long monthly sequences, and preserve the relationships between climate drivers and forecasted ecosystem states and fluxes. Experiments show that Fast-EcoDiffusion substantially accelerates inference compared with EcoDiffusion while maintaining competitive accuracy and probabilistic prediction skill.
+                   </div>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </div></li>
+
+        <li><div class="row m-0 mt-3 p-0">
+          <div class="col-sm-1 p-0 abbr">
+             <a class="badge font-weight-bold light-blue darken-1 align-middle" style="width: 75px;" href="https://kdd2026.kdd.org/" target="_blank">
+               KDD
+             </a>
+          </div>
+
+           <div class="col-sm-11 mt-2 mt-sm-0 p-0 pl-xs-0 pl-sm-5 pr-xs-0 pr-sm-2">
+
+             <div id="kdd26-global-carbon-flux" class="col p-0">
+               <h5 class="title mb-0">Knowledge-Guided Learning for Global Carbon Flux Prediction: Integrating High-Level Remote Sensing with Bottom-Up Physical Modeling</h5>
+               <div class="author">
+                   <nobr>Shuo Xu,</nobr>
+                   <nobr><em style="color: black;">Zhihao Wang</em>,</nobr>
+                   <nobr>Ruohan Li,</nobr>
+                   <nobr>Ruichen Wang,</nobr>
+                   <nobr>Lei Ma,</nobr>
+                   <nobr>George C. Hurtt,</nobr>
+                   <nobr>Xiaowei Jia,</nobr>
+                    and
+                   <nobr>Yiqun Xie.</nobr>
+               </div>
+
+               <div>
+                 <p class="periodical font-italic">
+                  The 32nd ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD'26), AI for Science Track. Jeju, Korea. 2026.
+                 </p>
+               </div>
+
+               <div class="col p-0">
+                 <a class="badge grey waves-effect font-weight-light mr-1" data-toggle="collapse" href="#kdd26-global-carbon-flux-abstract" role="button" aria-expanded="false" aria-controls="kdd26-global-carbon-flux-abstract">Abstract</a>
+                 <a class="badge grey waves-effect font-weight-light mr-1" href="https://dl.acm.org/doi/10.1145/3770855.3818927" target="_blank">PDF</a>
+               </div>
+               <div class="col mt-2 p-0">
+                 <div id="kdd26-global-carbon-flux-abstract" class="collapse">
+                   <div class="abstract card card-body font-weight-light mr-0 mr-sm-3 p-3">
+                    Forest ecosystems play a critical role in the global carbon cycle and Earth system, providing essential ecosystem services, including carbon sequestration, biodiversity support, and natural resources. Process-based physical models have been developed for decades and widely used to predict carbon dynamics in forest ecosystems. However, they are often based on predefined rules under simplifying assumptions, and have limited flexibility to incorporate increasingly available observations from remote sensing and in-situ networks. In particular, ecosystem models mostly rely on bottom-up subprocesses with subprocess-specific parameterization to mirror the real-world system. While remote sensing satellites provide large-scale observations of key ecosystem parameters (e.g., plant functional types) that can inform the calibration of individual sub-processes, such usage has not been considered due to the granularity mismatch: high-level, aggregated satellite observations are not applicable to individual sub-processes. Existing knowledge-guided learning approaches primarily focus on directly matched variables at the shared granularity to constrain the training process. We propose a knowledge-guided learning framework that bridges this representation gap with a decomposition-resembling design to incorporate high-level, aggregated remote sensing parameters into bottom-up, individualized sub-processes. Furthermore, to address the challenge of sparse in-situ carbon flux labels (i.e., final targets), the framework also includes uncertainty-aware refinements using probabilistic label expansion. Experimental results on global-scale benchmark datasets show that the knowledge-guided framework significantly improves prediction performance by enabling the effective use of high-level information.
+                   </div>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </div></li>
+
+      </ol>
+    </div>
+</div>
+
+
+<div class="row m-0 p-0" style="border-top: 1px solid #ddd; flex-direction: row-reverse;">
+    <div class="col-sm-1 mt-2 p-0 pr-1">
       <h3 class="bibliography-year">2025</h3>
     </div>
     <div class="col-sm-11 p-0">
@@ -1185,7 +1330,7 @@
 
   <!-- Footer -->
   <footer>
-    &copy; Copyright 2023 Zhihao Wang.
+    &copy; Copyright 2026 Zhihao Wang.
     
     
   </footer>
