@@ -189,6 +189,11 @@ html {
   text-align: left;
 }
 
+.about-bio strong {
+  color: #30485f;
+  font-weight: 500;
+}
+
 .about-bio a,
 .about-news a {
   color: var(--about-blue-dark);
@@ -305,7 +310,7 @@ html {
 }
 
 .about-news .text a {
-  padding-left: 0.18em;
+  padding-left: 0;
 }
 
 .about-news > .row.is-older-news[hidden] {
