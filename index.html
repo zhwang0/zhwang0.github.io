@@ -15,48 +15,20 @@
   <link rel="stylesheet" href="/assets/css/all.min.css">
   <link rel="stylesheet" href="/assets/css/academicons.min.css">
   <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/publications.css?v=20260812-unified3">
+  <link rel="stylesheet" href="/assets/css/about.css?v=20260812-unified7">
   <link rel="canonical" href="/">
-
-	<SCRIPT LANGUAGE="JavaScript">
-
-<!-- Begin
-var theImages = new Array()
-var theCredits = new Array()
-
-theImages[0] = '/assets/img/wang1.jpg'
-theImages[1] = '/assets/img/wang2.jpg'
-
-theCredits[0] = 'OSU'
-theCredits[1] = 'UMD'
-
-// do not edit anything below this line
-
-var j = 0
-var p = theImages.length;
-var preBuffer = new Array()
-for (i = 0; i < p; i++){
-   preBuffer[i] = new Image()
-   preBuffer[i].src = theImages[i]
-}
-var whichImage = Math.floor(Math.random()*(p));
-function showImage(){
-document.write('<img class="profile-img img-responsive" src="'+theImages[whichImage]+'" align="middle" height="230">');
-document.write('<p><font color="gray" size="1">Photo credit: '+theCredits[whichImage]+'</font></p>');
-}
-
-//  End -->
-</script>
-
 </head>
-<body>
+<body class="about-view">
   <!-- Header -->
   <nav id="navbar" class="navbar fixed-top navbar-expand-md grey lighten-5 z-depth-1 navbar-light">
     <div class="container-fluid p-0">
       
+        <a class="navbar-brand title font-weight-lighter" href="#about"><span class="font-weight-bold">Zhihao</span> Wang</a>
         <div class="row ml-1 ml-sm-0">
           <span class="contact-icon text-center" style="line-height: 1em;">
             <a href="mailto:zhwang1@umd.edu"><i class="fa fa-envelope-square gm-icon"></i></a>
-            <a href="https://scholar.google.com/citations?hl=en&user=fkCtrlkAAAAJ" target="_blank" title="Google Scholar"><i class="ai ai-google-scholar-square gs-icon"></i></a>
+            <a href="https://scholar.google.com/citations?hl=en&amp;user=fkCtrlkAAAAJ" target="_blank" title="Google Scholar"><i class="ai ai-google-scholar-square gs-icon"></i></a>
             <a href="https://www.linkedin.com/in/zhihao-wang-1b31a5155/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin li-icon"></i></a>
             <a href="https://twitter.com/Zhihao__" target="_blank" title="Twitter"><i class="fab fa-twitter-square tw-icon"></i></a>
             <a href="https://www.researchgate.net/profile/Zhihao-Wang-17" target="_blank" title="Research Gate"><i class="ai ai-researchgate-square rg-icon"></i></a>
@@ -71,8 +43,8 @@ document.write('<p><font color="gray" size="1">Photo credit: '+theCredits[whichI
       </button>
       <div class="collapse navbar-collapse text-right" id="navbarNav">
         <ul class="navbar-nav ml-auto flex-nowrap">
-          <li class="nav-item navbar-active font-weight-bold">
-            <a class="nav-link" href="/">
+          <li class="nav-item navbar-active font-weight-bold" data-section-nav="about">
+            <a class="nav-link section-nav-link" href="#about">
               About
               
                 <span class="sr-only">(current)</span>
@@ -80,8 +52,8 @@ document.write('<p><font color="gray" size="1">Photo credit: '+theCredits[whichI
             </a>
           </li>
 
-          <li class="nav-item ">
-            <a class="nav-link" href="/publications/">
+          <li class="nav-item" data-section-nav="publications">
+            <a class="nav-link section-nav-link" href="#publications">
               Publications
               
             </a>
@@ -132,53 +104,59 @@ document.write('<p><font color="gray" size="1">Photo credit: '+theCredits[whichI
   </progress>
 
   <!-- Content -->
-  <div class="content">
-    <div class="col p-0 pt-4 pb-4 ">
-        <h1 class="pb-3 title text-left font-weight-bold">Zhihao Wang</h1>
-        <div class="d-flex justify-content-between align-items-start">
-            <div>
-                <h6 class="text-left font-weight-bold" style="color:gray;">zhwang1 (at) umd (dot) edu</h1>
-                <h6 class="m-0 mb-2" style="font-size: 0.83em;"><a href="https://geog.umd.edu/" class="page-description" target="_blank">Department of Geographical Sciences</a></h6>
-                <h6 class="m-0 mb-2" style="font-size: 0.83em;"><a href="https://www.umd.edu/" class="page-description" target="_blank">University of Maryland</a></h6>
-                <h6 class="m-0 mb-2" style="font-size: 0.83em;"><a href="https://maps.app.goo.gl/qypiUtNUSKhZYtma9" class="page-description" target="_blank">College Park, MD 20742</a></h6>
-            </div>
-		    <!-- <img src="/assets/img/MIT_BDAII_logo.png" width="300" height="68" /> -->
-        </div>
-    </div>
+  <main class="content about-page">
+    <section id="about" class="about-hero" aria-labelledby="about-title">
+      <div class="about-hero-copy">
+        <p class="about-eyebrow">Earth system science · Geospatial AI</p>
+        <h1 id="about-title">Zhihao Wang</h1>
+        <p class="about-role">Postdoctoral Researcher at the University of Maryland</p>
 
-      
-<!-- Introduction -->
-
-<div style="display: flex; flex-wrap: wrap;">
-    <div class="text-justify p-0">
-        <div class="col-xs-12 col-sm-5 p-0 pt-2 pb-sm-2 pb-4 pl-sm-4 text-center" style="float: right;">
-            <img class="profile-img img-responsive" src="/assets/img/wang2.jpg" align="middle" height="180">
+        <div class="about-meta" aria-label="Contact and affiliation">
+          <a href="mailto:zhwang1@umd.edu"><i class="fas fa-envelope" aria-hidden="true"></i> zhwang1@umd.edu</a>
+          <a href="https://geog.umd.edu/" target="_blank"><i class="fas fa-university" aria-hidden="true"></i> Geographical Sciences</a>
+          <a href="https://maps.app.goo.gl/qypiUtNUSKhZYtma9" target="_blank"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> College Park, Maryland</a>
         </div>
 
-        <p style="color:Coral;">
-            <b>I am currently on the job market and seeking faculty and research scientist positions.</b>
-            <!-- <b>I am starting looking for a postdoc position starting in Summer 2027!</b> -->
-        </p>
+      </div>
 
-        <p>
-				    I am a Postdoctoral Researcher in the <a href="https://geog.umd.edu/" target="_blank">Department of Geographical Sciences</a> at the <a href="https://www.umd.edu/" target="_blank">University of Maryland, College Park</a>, where I received my Ph.D. under the supervision of <a href="https://terpconnect.umd.edu/~xie/index.html" target="_blank">Dr. Yiqun Xie</a>. My research lies at the intersection of <strong>Earth system science, geospatial AI, and deep learning</strong>, with a focus on <strong>AI emulation and world models, geo-foundation models, satellite remote sensing, and physics-based modeling</strong>. I aim to develop scalable and reliable AI methods for addressing critical Earth science challenges, including biosphere modeling, ecosystem dynamics, and large-scale Earth monitoring and forecasting.
-        </p>
-    <p>
-        I obtained my Master in Geography at <a href="https://www.osu.edu/" target="_blank">The Ohio State University</a> with&nbsp;<a href="https://u.osu.edu/liu.738/" target="_blank">Dr. Desheng Liu</a>. 
-        Previously, I graduated from a dual-degree program, where I received a B.E.S. in Honors Geomatics and Minor in Computer Science at the <a href="https://uwaterloo.ca/" target="_blank">University of Waterloo</a>, Canada, 
-        and a B.E. in Remote Sensing Science and Technology at <a href="https://en.whu.edu.cn/" target="_blank">Wuhan University</a>, China.
+      <figure class="about-portrait">
+        <img src="/assets/img/wang2.jpg" alt="Portrait of Zhihao Wang" width="320" height="320">
+        <figcaption>University of Maryland</figcaption>
+      </figure>
+    </section>
 
-    </p>
-        
-    </div>
-</div>
+    <section class="about-introduction" aria-labelledby="research-heading">
+      <aside class="job-market-note">
+        <i class="fas fa-briefcase" aria-hidden="true"></i>
+        <p><strong>On the job market.</strong> Seeking faculty and research scientist positions.</p>
+      </aside>
 
+      <div class="about-bio">
+        <div class="about-bio-heading">
+          <p class="about-section-label">About my research</p>
+          <h2 id="research-heading">Building reliable AI for a changing Earth</h2>
+        </div>
+        <div class="about-bio-copy">
+          <p>
+            I am a Postdoctoral Researcher in the <a href="https://geog.umd.edu/" target="_blank">Department of Geographical Sciences</a> at the <a href="https://www.umd.edu/" target="_blank">University of Maryland, College Park</a>, where I received my Ph.D. under the supervision of <a href="https://terpconnect.umd.edu/~xie/index.html" target="_blank">Dr. Yiqun Xie</a>. My research lies at the intersection of <strong>Earth system science, geospatial AI, and deep learning</strong>, with a focus on <strong>AI emulations, world models, geo-foundation models, satellite remote sensing, and physics-based modeling</strong>. I aim to develop scalable and reliable AI methods for addressing critical Earth science challenges, including biosphere modeling, ecosystem dynamics, and large-scale Earth monitoring and forecasting.
+          </p>
+          <p>
+            I obtained my Master in Geography at <a href="https://www.osu.edu/" target="_blank">The Ohio State University</a> with <a href="https://u.osu.edu/liu.738/" target="_blank">Dr. Desheng Liu</a>. Previously, I graduated from a dual-degree program, receiving a B.E.S. in Honors Geomatics and a Minor in Computer Science from the <a href="https://uwaterloo.ca/" target="_blank">University of Waterloo</a>, Canada, and a B.E. in Remote Sensing Science and Technology from <a href="https://en.whu.edu/" target="_blank">Wuhan University</a>, China.
+          </p>
+        </div>
+      </div>
+    </section>
 
-<!-- Selected Publications -->
 
 <!-- News -->
-<div class="news mt-3 p-0">
-  <h1 class="title mb-4 p-0">news</h1>
+    <section id="news" class="about-news" aria-labelledby="news-heading">
+      <div class="about-section-heading">
+        <div>
+          <p class="about-section-label">Latest updates</p>
+          <h2 id="news-heading">News</h2>
+        </div>
+        <p>Research milestones, awards, and announcements.</p>
+      </div>
 
   <div class="row p-0">
     <div class="col-sm-2 p-0">
@@ -326,10 +304,48 @@ document.write('<p><font color="gray" size="1">Photo credit: '+theCredits[whichI
 
     <!-- <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=f9f9f9&w=a&t=tt&d=BfAZupzfq1Qs8S4lgm7xi5XP2Jid7ZiU8T2pAJ4XJJE&co=90c6ed&cmo=6977ea&cmn=3dede0'></script> -->
     <!-- <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=5c92f7&w=a&t=tt&d=BfAZupzfq1Qs8S4lgm7xi5XP2Jid7ZiU8T2pAJ4XJJE&co=ffffff&cmo=6977ea&cmn=3dede0'></script> -->
-    <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=c3d1ed&w=a&t=tt&d=BfAZupzfq1Qs8S4lgm7xi5XP2Jid7ZiU8T2pAJ4XJJE&co=ffffff&cmo=045a8d&cmn=2b8cbe&ct=5b5858'></script>
+      <div class="visitor-map" aria-label="Website visitor map">
+        <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=c3d1ed&w=a&t=tt&d=BfAZupzfq1Qs8S4lgm7xi5XP2Jid7ZiU8T2pAJ4XJJE&co=ffffff&cmo=045a8d&cmn=2b8cbe&ct=5b5858'></script>
+      </div>
+    </section>
 
+    <section id="publications" class="homepage-publications publications-page" aria-labelledby="homepage-publications-heading" aria-busy="true">
+      <div class="about-section-heading publications-section-heading">
+        <div>
+          <p class="about-section-label">Research archive</p>
+          <h2 id="homepage-publications-heading">Publications</h2>
+        </div>
+        <a class="scholar-link" href="https://scholar.google.com/citations?hl=en&amp;user=fkCtrlkAAAAJ" target="_blank" rel="noopener noreferrer">View all on Google Scholar <span aria-hidden="true">↗</span></a>
+      </div>
 
-</div>
+      <section class="publication-controls" aria-label="Filter publications">
+        <span class="publication-filter-label">Show</span>
+        <div class="publication-filters" role="group" aria-label="Publication type">
+          <button class="publication-filter is-active" type="button" data-filter="all" aria-pressed="true">All</button>
+          <button class="publication-filter" type="button" data-filter="conference" aria-pressed="false">Conference</button>
+          <button class="publication-filter" type="button" data-filter="journal" aria-pressed="false">Journal</button>
+        </div>
+      </section>
+
+      <nav class="publication-year-index" aria-label="Publication years">
+        <span>Jump to</span>
+        <a href="#year-2026">2026</a>
+        <a href="#year-2025">2025</a>
+        <a href="#year-2024">2024</a>
+        <a href="#year-2023">2023</a>
+        <a href="#year-2022">2022</a>
+      </nav>
+
+      <div class="publication-notes">
+        <span class="type-key conference-key"><i aria-hidden="true"></i>Conference</span>
+        <span class="type-key journal-key"><i aria-hidden="true"></i>Journal</span>
+        <span class="authorship-note"><strong>*</strong> Equal contribution and joint lead authorship</span>
+      </div>
+
+      <p id="publication-results-status" class="sr-only" aria-live="polite"></p>
+      <div class="publication-loading" role="status">Loading publications…</div>
+    </section>
+  </main>
 
 
 
@@ -348,6 +364,8 @@ document.write('<p><font color="gray" size="1">Photo credit: '+theCredits[whichI
   <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
   <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML"></script>
   <script src="/assets/js/common.js"></script>
+  <script src="/assets/js/publications.js?v=20260812-unified3"></script>
+  <script src="/assets/js/about.js?v=20260812-unified3"></script>
 
   <!-- Scrolling Progress Bar -->
   <script type="text/javascript">
