@@ -56,7 +56,7 @@
     }
     publications.setAttribute("data-load-started", "true");
 
-    fetch("/publications/?v=20260818-solar1")
+    fetch("/publications/?v=20260818-pdf-labels1")
       .then(function (response) {
         if (!response.ok) {
           throw new Error("Unable to load publications");
