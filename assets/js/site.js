@@ -18,6 +18,7 @@
     }
     navigation.classList.remove("show");
     toggler.setAttribute("aria-expanded", "false");
+    updateLayout();
   }
 
   function updateLayout() {

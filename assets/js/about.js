@@ -87,6 +87,11 @@
           if (target) {
             target.scrollIntoView();
           }
+        } else if (window.location.hash === "#teaching") {
+          var teaching = document.getElementById("teaching");
+          if (teaching) {
+            teaching.scrollIntoView();
+          }
         }
         window.dispatchEvent(new Event("resize"));
       })
@@ -120,7 +125,7 @@
       return;
     }
 
-    if (window.location.hash === "#publications" || window.location.hash.indexOf("#year-") === 0) {
+    if (window.location.hash === "#publications" || window.location.hash === "#teaching" || window.location.hash.indexOf("#year-") === 0) {
       loadPublications();
       return;
     }
@@ -129,9 +134,18 @@
   }
 
   function initSectionNavigation() {
-    var publicationSection = document.getElementById("publications");
     var navItems = Array.prototype.slice.call(document.querySelectorAll("[data-section-nav]"));
-    if (!publicationSection || navItems.length === 0) {
+    var sectionTargets = navItems.map(function (item) {
+      var name = item.getAttribute("data-section-nav");
+      return {
+        name: name,
+        element: document.getElementById(name)
+      };
+    }).filter(function (section) {
+      return section.element;
+    });
+
+    if (sectionTargets.length === 0) {
       return;
     }
 
@@ -154,11 +168,18 @@
     function updateActiveSection() {
       var navbar = document.getElementById("navbar");
       var threshold = window.scrollY + (navbar ? navbar.offsetHeight : 0) + 100;
-      setActiveSection(threshold >= publicationSection.offsetTop ? "publications" : "about");
+      var activeSection = sectionTargets[0].name;
+      sectionTargets.forEach(function (section) {
+        if (threshold >= section.element.offsetTop) {
+          activeSection = section.name;
+        }
+      });
+      setActiveSection(activeSection);
     }
 
     updateActiveSection();
     window.addEventListener("scroll", updateActiveSection, { passive: true });
+    window.addEventListener("resize", updateActiveSection);
   }
 
   secureExternalLinks(page);
