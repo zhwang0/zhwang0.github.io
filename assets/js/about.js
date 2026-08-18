@@ -87,10 +87,10 @@
           if (target) {
             target.scrollIntoView();
           }
-        } else if (window.location.hash === "#teaching") {
-          var teaching = document.getElementById("teaching");
-          if (teaching) {
-            teaching.scrollIntoView();
+        } else if (window.location.hash === "#teaching" || window.location.hash === "#service") {
+          var downstreamSection = document.querySelector(window.location.hash);
+          if (downstreamSection) {
+            downstreamSection.scrollIntoView();
           }
         }
         window.dispatchEvent(new Event("resize"));
@@ -125,7 +125,7 @@
       return;
     }
 
-    if (window.location.hash === "#publications" || window.location.hash === "#teaching" || window.location.hash.indexOf("#year-") === 0) {
+    if (window.location.hash === "#publications" || window.location.hash === "#teaching" || window.location.hash === "#service" || window.location.hash.indexOf("#year-") === 0) {
       loadPublications();
       return;
     }
@@ -174,6 +174,9 @@
           activeSection = section.name;
         }
       });
+      if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2) {
+        activeSection = sectionTargets[sectionTargets.length - 1].name;
+      }
       setActiveSection(activeSection);
     }
 
