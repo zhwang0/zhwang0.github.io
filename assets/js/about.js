@@ -56,7 +56,7 @@
     }
     publications.setAttribute("data-load-started", "true");
 
-    fetch("/publications/")
+    fetch("/publications/?v=20260818-rse1")
       .then(function (response) {
         if (!response.ok) {
           throw new Error("Unable to load publications");
