@@ -5591,21 +5591,6 @@ progress { position: fixed; left: 0; top: 56px; z-index: 10; width: 100%; height
 .news .date { width: 85px; }
 .news .text p, .news .text a { padding-left: .2em; }
 
-/* Projects */
-.project-card { position: relative; width: 100%; min-height: 1px; padding-right: 15px; padding-left: 15px; flex: 0 0 100%; max-width: 100%; }
-@media (min-width: 576px) { .project-card { flex: 0 0 50%; max-width: 50%; } }
-@media (min-width: 768px) { .project-card { flex: 0 0 33.3333333333%; max-width: 33.3333333333%; } }
-.project-card .card { transition: all 0.2s ease-in-out; margin-bottom: 1.5rem; padding: 0; }
-.project-card .card:hover { box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); transition: all 0.2s ease-in-out; }
-.project-card .wordpress-icon { display: block; font-size: 40px; margin-bottom: -0.3em; margin-top: 0.5rem; margin-left: -0.25rem; margin-right: 0.5rem; padding: 0; }
-.project-card .wordpress-icon .icon { margin-right: 0.25rem; }
-.project-card .github-icon { margin-top: 0.5rem; margin-bottom: -1.5rem; margin-left: -0.25rem; margin-right: 0.5rem; padding: 0; }
-.project-card .github-icon .icon { display: block; font-size: 40px; margin-bottom: -0.3em; margin-right: 0.25rem; }
-.project-card .github-icon .stars { display: inline-block; padding: 0.25em 0.4em; font-size: 75%; font-weight: 700; line-height: 1; text-align: center; white-space: nowrap; vertical-align: baseline; border-radius: 0.25rem; transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; background-color: #039be5 !important; color: #fff !important; position: relative; top: -50px; left: 20px; }
-@media (prefers-reduced-motion: reduce) { .project-card .github-icon .stars { transition: none; } }
-a.project-card .github-icon .stars:hover, a.project-card .github-icon .stars:focus { text-decoration: none; }
-.project-card .github-icon .stars:empty { display: none; }
-
 /* Publications */
 .bibliography { padding: 0em; }
 .bibliography .abbr span { width: 65px; }
@@ -8440,7 +8425,6 @@ footer { color: #343a40; background-color: #fdfdfd; }
 .news a { color: #039be5; }
 .news a:hover { text-decoration: underline; }
 
-.project-card .card-body { border-top: 1px solid rgba(60, 72, 88, 0.2); }
 
 /** Variables **********************************************
 $base-font-family:              Helvetica, sans-serif;
