@@ -230,10 +230,16 @@ html {
   grid-template-columns: 82px minmax(0, 1fr);
   gap: 20px;
   align-items: start;
-  margin: 0 0 30px !important;
+  margin: 0 !important;
   padding: 0 !important;
   border: 0 !important;
   scroll-margin-top: 86px;
+}
+
+.publication-year-section + .publication-year-section {
+  margin-top: 22px !important;
+  padding-top: 22px !important;
+  border-top: 1px solid var(--pub-line) !important;
 }
 
 .publication-year-section > [class*="col-sm-"] {
@@ -416,6 +422,25 @@ html {
   transition: border-color 150ms ease, color 150ms ease, background 150ms ease;
 }
 
+.publications-page .publication-highlight-badge {
+  display: inline-flex;
+  gap: 5px;
+  align-items: center;
+  min-height: 25px;
+  padding: 5px 8px;
+  border: 1px solid #efc5a7;
+  border-radius: 6px;
+  background: #fff4e7;
+  color: #a45508;
+  font-size: 0.66rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.publications-page .publication-highlight-badge i {
+  font-size: 0.7rem;
+}
+
 .publications-page .publication-card .badge.grey:hover,
 .publications-page .publication-card .badge.grey[aria-expanded="true"] {
   border-color: #9cc7e1;
@@ -494,8 +519,13 @@ html {
 
   .publication-year-section {
     display: block !important;
-    margin-bottom: 28px !important;
+    margin-bottom: 0 !important;
     scroll-margin-top: 76px;
+  }
+
+  .publication-year-section + .publication-year-section {
+    margin-top: 20px !important;
+    padding-top: 20px !important;
   }
 
   .publication-year-section > [class*="col-sm-"]:first-child {
