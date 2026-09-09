@@ -423,8 +423,9 @@ html {
 
 .award-highlight {
   display: inline-flex;
+  gap: 4px;
   align-items: center;
-  margin: 0 3px 0 0;
+  margin: 0 0 0 5px;
   padding: 2px 7px;
   border-radius: 999px;
   background: var(--about-orange-soft);
@@ -436,6 +437,10 @@ html {
   line-height: 1.25;
   vertical-align: 0.08em;
   white-space: nowrap;
+}
+
+.award-highlight i {
+  font-size: 0.68rem;
 }
 
 .award-entry p {
