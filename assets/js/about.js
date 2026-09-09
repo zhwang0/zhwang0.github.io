@@ -72,7 +72,25 @@
 
         var fragment = document.createDocumentFragment();
         sourceHeadings.forEach(function (heading) {
-          fragment.appendChild(document.importNode(heading.closest(".row"), true));
+          var yearSection = document.importNode(heading.closest(".row"), true);
+          var cards = Array.prototype.slice.call(yearSection.querySelectorAll(".bibliography > li"));
+
+          cards.forEach(function (card) {
+            var authors = Array.prototype.slice.call(card.querySelectorAll(".author nobr"));
+            var firstAuthor = authors.length > 0 ? authors[0].textContent.replace(/\s+/g, " ").trim() : "";
+            var isFirstAuthor = firstAuthor.indexOf("Zhihao Wang") !== -1;
+            var isCoFirstAuthor = authors.some(function (author) {
+              return author.textContent.replace(/\s+/g, " ").indexOf("Zhihao Wang*") !== -1;
+            });
+
+            if (!isFirstAuthor && !isCoFirstAuthor) {
+              card.remove();
+            }
+          });
+
+          if (yearSection.querySelector(".bibliography > li")) {
+            fragment.appendChild(yearSection);
+          }
         });
 
         loading.replaceWith(fragment);
