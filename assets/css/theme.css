@@ -68,6 +68,25 @@ body {
   color: var(--theme-text);
 }
 
+.contact-icon a[title="GitHub"] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1em;
+  height: 1em;
+  vertical-align: top;
+}
+
+.contact-icon a[title="GitHub"] .gh-icon {
+  pointer-events: none;
+}
+
+.contact-icon a[title="GitHub"]:focus-visible {
+  border-radius: 3px;
+  outline: 3px solid var(--theme-focus);
+  outline-offset: 2px;
+}
+
 .theme-toggle {
   display: inline-flex;
   flex: 0 0 36px;

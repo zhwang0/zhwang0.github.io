@@ -452,8 +452,7 @@ html {
 
 .service-section {
   margin-top: 54px;
-  padding: 46px 0 0;
-  border-top: 1px solid var(--about-line);
+  padding: 0;
   scroll-margin-top: 82px;
 }
 
@@ -723,7 +722,7 @@ html {
 
   .service-section {
     margin-top: 40px;
-    padding-top: 33px;
+    padding-top: 0;
   }
 
   .teaching-group {
