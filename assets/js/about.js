@@ -87,7 +87,7 @@
           if (target) {
             target.scrollIntoView();
           }
-        } else if (window.location.hash === "#teaching" || window.location.hash === "#service") {
+        } else if (window.location.hash === "#awards" || window.location.hash === "#teaching" || window.location.hash === "#service") {
           var downstreamSection = document.querySelector(window.location.hash);
           if (downstreamSection) {
             downstreamSection.scrollIntoView();
@@ -125,7 +125,7 @@
       return;
     }
 
-    if (window.location.hash === "#publications" || window.location.hash === "#teaching" || window.location.hash === "#service" || window.location.hash.indexOf("#year-") === 0) {
+    if (window.location.hash === "#publications" || window.location.hash === "#awards" || window.location.hash === "#teaching" || window.location.hash === "#service" || window.location.hash.indexOf("#year-") === 0) {
       loadPublications();
       return;
     }

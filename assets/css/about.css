@@ -363,10 +363,66 @@ html {
   text-underline-offset: 3px;
 }
 
+.awards-section {
+  margin-top: 54px;
+  padding: 0;
+  scroll-margin-top: 82px;
+}
+
+.awards-list {
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--about-line);
+  list-style: none;
+}
+
+.award-entry {
+  display: grid;
+  grid-template-columns: 92px minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+  padding: 17px 0;
+  border-bottom: 1px solid var(--about-line);
+}
+
+.award-entry time,
+.award-year {
+  padding-top: 2px;
+  color: var(--about-blue-dark);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.035em;
+  white-space: nowrap;
+}
+
+.award-entry h3 {
+  margin: 0;
+  color: var(--about-ink);
+  font-family: "Roboto Slab", "Times New Roman", serif;
+  font-size: 0.96rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.award-detail {
+  margin-left: 5px;
+  color: var(--about-muted);
+  font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.award-entry p {
+  margin: 4px 0 0;
+  color: var(--about-muted);
+  font-size: 0.76rem;
+  line-height: 1.45;
+}
+
 .teaching-section {
   margin-top: 54px;
-  padding: 46px 0 0;
-  border-top: 1px solid var(--about-line);
+  padding: 0;
   scroll-margin-top: 82px;
 }
 
@@ -631,6 +687,7 @@ html {
   #about,
   .about-news,
   .homepage-publications.publications-page,
+  .awards-section,
   .teaching-section,
   .service-section {
     scroll-margin-top: 110px;
@@ -715,9 +772,25 @@ html {
     padding-top: 33px;
   }
 
+  .awards-section {
+    margin-top: 40px;
+    padding-top: 0;
+  }
+
+  .award-entry {
+    grid-template-columns: 76px minmax(0, 1fr);
+    gap: 16px;
+  }
+
+  .award-detail {
+    display: block;
+    margin: 3px 0 0;
+    white-space: normal;
+  }
+
   .teaching-section {
     margin-top: 40px;
-    padding-top: 33px;
+    padding-top: 0;
   }
 
   .service-section {
