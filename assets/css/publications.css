@@ -31,6 +31,18 @@ html {
   max-width: 1120px;
 }
 
+.publications-view .publication-back-link {
+  display: inline-flex !important;
+  gap: 6px;
+  align-items: center;
+  font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 400;
+}
+
+.publications-view .publication-back-link i {
+  font-size: 0.76em;
+}
+
 .publications-page {
   padding-top: 32px;
   padding-bottom: 68px;
