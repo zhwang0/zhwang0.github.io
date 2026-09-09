@@ -343,6 +343,11 @@ html {
   scroll-margin-top: 82px;
 }
 
+.homepage-publications .publication-year-section + .publication-year-section {
+  margin-top: 14px !important;
+  padding-top: 14px !important;
+}
+
 .publications-section-heading .scholar-link {
   margin: 0 0 4px;
 }
@@ -773,6 +778,11 @@ html {
   .homepage-publications.publications-page {
     margin-top: 40px;
     padding-top: 33px;
+  }
+
+  .homepage-publications .publication-year-section + .publication-year-section {
+    margin-top: 12px !important;
+    padding-top: 12px !important;
   }
 
   .awards-section {

@@ -56,7 +56,7 @@
     }
     publications.setAttribute("data-load-started", "true");
 
-    fetch("/publications/?v=20260909-publication-badges1")
+    fetch("/publications/?v=20260909-arxiv1")
       .then(function (response) {
         if (!response.ok) {
           throw new Error("Unable to load publications");
