@@ -370,6 +370,9 @@ html {
 }
 
 .awards-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 34px;
   margin: 0;
   padding: 0;
   border-top: 1px solid var(--about-line);
@@ -378,10 +381,10 @@ html {
 
 .award-entry {
   display: grid;
-  grid-template-columns: 92px minmax(0, 1fr);
-  gap: 24px;
+  grid-template-columns: 76px minmax(0, 1fr);
+  gap: 14px;
   align-items: start;
-  padding: 17px 0;
+  padding: 13px 0;
   border-bottom: 1px solid var(--about-line);
 }
 
@@ -778,8 +781,12 @@ html {
   }
 
   .award-entry {
-    grid-template-columns: 76px minmax(0, 1fr);
-    gap: 16px;
+    grid-template-columns: 70px minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  .awards-list {
+    grid-template-columns: 1fr;
   }
 
   .award-detail {
