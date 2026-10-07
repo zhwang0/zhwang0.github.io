@@ -1,0 +1,182 @@
+.resume-view {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.resume-view .navbar {
+  background-color: var(--theme-navbar) !important;
+  backdrop-filter: blur(12px);
+}
+
+.resume-view .navbar .container-fluid {
+  max-width: 1120px;
+}
+
+.resume-page {
+  width: min(100% - 40px, 860px);
+  margin: 0 auto;
+  padding: clamp(40px, 7vw, 76px) 0 72px;
+  flex: 1;
+}
+
+.resume-heading {
+  margin-bottom: 34px;
+}
+
+.resume-eyebrow,
+.resume-document-label {
+  margin: 0 0 12px;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.resume-eyebrow {
+  color: var(--theme-accent);
+}
+
+.resume-heading h1 {
+  margin: 0 0 18px;
+  font-family: "Roboto Slab", "Times New Roman", serif;
+  font-size: clamp(2.6rem, 6vw, 3.6rem);
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+.resume-intro,
+.resume-primary > p,
+.resume-secondary p {
+  color: var(--theme-muted);
+  line-height: 1.65;
+}
+
+.resume-primary {
+  padding: clamp(24px, 5vw, 40px);
+  border: 1px solid var(--theme-line);
+  border-top: 3px solid var(--theme-accent);
+  border-radius: 12px;
+  background: var(--theme-surface-soft);
+}
+
+.resume-page h2 {
+  margin: 0 0 12px;
+  color: var(--theme-text);
+  font-size: 1.55rem;
+  font-weight: 500;
+}
+
+.resume-document-label i {
+  margin-right: 5px;
+}
+
+.resume-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px 24px;
+  margin-top: 24px;
+}
+
+.resume-page a {
+  color: var(--theme-accent-strong);
+  font-weight: 500;
+}
+
+.resume-page a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.resume-page .resume-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  min-height: 48px;
+  padding: 12px 22px;
+  border-radius: 6px;
+  background: #1769aa;
+  color: #fff;
+}
+
+.resume-page .resume-button:hover {
+  background: #0f4f84;
+  text-decoration: none;
+}
+
+.resume-download {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  font-size: 0.88rem;
+}
+
+.resume-secondary {
+  margin-top: 36px;
+  padding: 0 4px;
+  scroll-margin-top: 96px;
+}
+
+.resume-secondary h2 {
+  font-size: 1.3rem;
+}
+
+.resume-secondary .resume-actions {
+  margin-top: 10px;
+}
+
+.resume-text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 44px;
+}
+
+.resume-page a:focus-visible,
+.resume-view .nav-link:focus-visible,
+.resume-view .navbar-brand:focus-visible {
+  outline: 3px solid var(--theme-focus);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+.resume-view footer {
+  position: static;
+  padding: 18px 20px;
+  border-top: 1px solid var(--theme-line);
+  color: var(--theme-muted);
+  background: var(--theme-bg);
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.resume-skip-link {
+  position: fixed;
+  left: 16px;
+  top: -80px;
+  z-index: 1100;
+  padding: 10px 16px;
+  border: 2px solid var(--theme-accent);
+  border-radius: 4px;
+  background: var(--theme-surface);
+  color: var(--theme-text);
+}
+
+.resume-skip-link:focus {
+  top: 12px;
+}
+
+@media (max-width: 480px) {
+  .resume-primary .resume-actions {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .resume-primary .resume-download {
+    justify-content: center;
+  }
+}
