@@ -15,6 +15,7 @@
     var buttons = Array.prototype.slice.call(stage.querySelectorAll("[data-page-step]"));
     var pageCount = Number(stage.getAttribute("data-page-count"));
     var prefix = stage.getAttribute("data-preview-prefix");
+    var previewVersion = stage.getAttribute("data-preview-version");
     var label = stage.getAttribute("data-document-label");
     var pdf = previewLink.getAttribute("href").split("#")[0];
     var currentPage = 1;
@@ -54,7 +55,8 @@
         status.textContent = "Page " + currentPage + " of " + pageCount;
         updateControls();
       }
-      nextImage.src = prefix + (target === 1 ? "" : "-" + target) + ".webp";
+      nextImage.src = prefix + (target === 1 ? "" : "-" + target) + ".webp" +
+        (previewVersion ? "?v=" + encodeURIComponent(previewVersion) : "");
     }
     buttons.forEach(function (button) {
       button.hidden = false;
