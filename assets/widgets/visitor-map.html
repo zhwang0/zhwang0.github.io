@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Visitor map</title>
+  <style>
+    :root { --ocean: #ffffff; --past: #1769aa; --text: #667085; }
+    :root[data-theme="dark"] { --ocean: #0d1520; --past: #79bee9; --text: #a7b3c4; }
+    html, body { margin: 0; padding: 0; width: 100%; overflow: hidden; background: var(--ocean); }
+    #mapmyvisitors-widget { width: 100% !important; }
+    .mapmyvisitors-map-container { background-color: var(--ocean) !important; }
+    .jvectormap-container { background-color: transparent !important; }
+    .mapmyvisitors-map { width: 100% !important; height: auto !important; aspect-ratio: 2.04; background-image: var(--map-background) !important; background-size: 100% 100%; }
+    .mapmyvisitors-visitors, .mapmyvisitors-date { display: none !important; }
+    svg circle[fill="#1769aa"] { fill: var(--past); }
+    svg circle { stroke: var(--ocean); }
+    .jvectormap-zoomin, .jvectormap-zoomout { background: var(--ocean) !important; color: var(--text) !important; }
+  </style>
+</head>
+<body>
+  <script src="/assets/js/visitor-map-frame.js?v=20261008-visitors1"></script>
+</body>
+</html>

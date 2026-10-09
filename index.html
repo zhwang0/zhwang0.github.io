@@ -20,7 +20,7 @@
   <link rel="stylesheet" href="/assets/css/academicons.min.css">
   <link rel="stylesheet" href="/assets/css/main.css?v=20260813-performance">
   <link rel="stylesheet" href="/assets/css/publications.css?v=20260909-oral-star1">
-  <link rel="stylesheet" href="/assets/css/about.css?v=20260909-award-highlights2">
+  <link rel="stylesheet" href="/assets/css/about.css?v=20261008-visitors1">
   <link rel="stylesheet" href="/assets/css/theme.css?v=20260909-oral1">
   <link rel="canonical" href="/">
 </head>
@@ -640,6 +640,16 @@
         </section>
       </div>
     </section>
+    <section id="visitors" class="visitor-section" aria-labelledby="visitor-heading">
+      <h2 id="visitor-heading">Visitors around the world</h2>
+      <div class="visitor-map-shell" id="visitor-map-shell">
+        <iframe id="visitor-map-frame" title="World map of approximate visitor locations" sandbox="allow-scripts" referrerpolicy="strict-origin-when-cross-origin" hidden></iframe>
+        <p id="visitor-map-status" class="visitor-map-status" role="status">Loading visitor map…</p>
+      </div>
+      <button id="visitor-map-preview" class="visitor-map-preview" type="button" hidden>Load live map</button>
+      <p class="visitor-map-credit">Approximate locations · <a href="https://mapmyvisitors.com/" target="_blank" rel="noopener noreferrer">MapMyVisitors</a> · <a href="https://mapmyvisitors.com/b/policy" target="_blank" rel="noopener noreferrer">Privacy</a></p>
+      <noscript><style>#visitor-map-shell { display: none; }</style><p class="visitor-map-credit">Enable JavaScript to display the visitor map.</p></noscript>
+    </section>
   </main>
 
 
@@ -653,6 +663,7 @@
   <!-- Core JavaScript Files -->
   <script src="/assets/js/site.js?v=20260818-navigation1"></script>
   <script src="/assets/js/publications.js?v=20260812-unified3"></script>
-  <script src="/assets/js/about.js?v=20260909-featured3"></script>
+  <script src="/assets/js/about.js?v=20261008-visitors1"></script>
+  <script src="/assets/js/visitor-map.js?v=20261008-visitors1"></script>
 </body>
 </html>
