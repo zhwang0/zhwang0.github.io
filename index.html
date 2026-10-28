@@ -22,6 +22,7 @@
   <link rel="stylesheet" href="/assets/css/publications.css?v=20260909-oral-star1">
   <link rel="stylesheet" href="/assets/css/about.css?v=20261008-visitors1">
   <link rel="stylesheet" href="/assets/css/theme.css?v=20260909-oral1">
+  <link rel="stylesheet" href="/assets/css/research-spotlight.css?v=20261027-carbon2">
   <link rel="canonical" href="/">
 </head>
 <body class="about-view">
@@ -164,6 +165,28 @@
       </div>
     </section>
 
+
+    <section id="carbon-spotlight" class="research-spotlight" aria-labelledby="carbon-spotlight-title" hidden>
+      <div class="spotlight-media">
+        <video class="spotlight-teaser" muted loop playsinline preload="none" poster="/assets/img/carbonglobe-poster.jpg" data-src="/assets/video/carbonglobe-teaser.mp4" aria-label="A silent visual preview of CarbonGlobe’s forest carbon research">
+          Your browser does not support embedded video.
+        </video>
+        <button class="spotlight-motion" type="button" aria-label="Play video preview" hidden>
+          <i class="fas fa-play" aria-hidden="true"></i>
+        </button>
+        <span class="spotlight-media-caption" aria-hidden="true">A window into CarbonGlobe</span>
+      </div>
+      <div class="spotlight-copy">
+        <p class="about-section-label">Research spotlight <span>NeurIPS 2025</span></p>
+        <h2 id="carbon-spotlight-title">CarbonGlobe</h2>
+        <p class="spotlight-tagline">Teaching AI how the world’s forests grow.</p>
+        <p class="spotlight-description">A global-scale dataset and benchmark for AI emulation of forest carbon dynamics.</p>
+        <div class="spotlight-actions">
+          <a class="spotlight-project" href="https://zhwang0.github.io/carbon-globe-website/" target="_blank" rel="noopener noreferrer">Explore CarbonGlobe <span aria-hidden="true">→</span></a>
+          <a class="spotlight-watch" href="https://zhwang0.github.io/carbon-globe-website/assets/film/carbonglobe-film.mp4" target="_blank" rel="noopener noreferrer" data-carbon-film><i class="fas fa-play" aria-hidden="true"></i> Watch film <span>70 sec</span></a>
+        </div>
+      </div>
+    </section>
 
 <!-- News -->
     <section id="news" class="about-news" aria-labelledby="news-heading">
@@ -652,6 +675,14 @@
     </section>
   </main>
 
+  <dialog class="carbon-film-dialog" aria-labelledby="carbon-film-title">
+    <div class="carbon-film-heading">
+      <h2 id="carbon-film-title">CarbonGlobe — the film</h2>
+      <button class="carbon-film-close" type="button" aria-label="Close film" autofocus><i class="fas fa-times" aria-hidden="true"></i></button>
+    </div>
+    <video class="carbon-full-film" controls playsinline preload="none" poster="/assets/img/carbonglobe-poster.jpg" aria-label="CarbonGlobe film, with music"></video>
+    <p>Explore the science behind the film on the <a href="https://zhwang0.github.io/carbon-globe-website/" target="_blank" rel="noopener noreferrer">CarbonGlobe project website <span aria-hidden="true">↗</span></a>.</p>
+  </dialog>
 
 
   <!-- Footer -->
@@ -663,7 +694,8 @@
   <!-- Core JavaScript Files -->
   <script src="/assets/js/site.js?v=20260818-navigation1"></script>
   <script src="/assets/js/publications.js?v=20260812-unified3"></script>
-  <script src="/assets/js/about.js?v=20261008-visitors1"></script>
+  <script src="/assets/js/research-spotlight.js?v=20261027-carbon2"></script>
+  <script src="/assets/js/about.js?v=20261027-carbon2"></script>
   <script src="/assets/js/visitor-map.js?v=20261008-visitors1"></script>
 </body>
 </html>

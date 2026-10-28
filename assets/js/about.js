@@ -56,7 +56,7 @@
     }
     publications.setAttribute("data-load-started", "true");
 
-    fetch("/publications/?v=20260909-arxiv1")
+    fetch("/publications/?v=20261027-carbon1")
       .then(function (response) {
         if (!response.ok) {
           throw new Error("Unable to load publications");
@@ -97,9 +97,17 @@
         window.initPublications(publications);
         publications.setAttribute("aria-busy", "false");
         secureExternalLinks(publications);
+        document.dispatchEvent(new Event("homepage:publications-ready"));
 
         if (window.location.hash === "#publications") {
           publications.scrollIntoView();
+        } else if (window.location.hash === "#carbon-globe" || window.location.hash === "#carbon-spotlight") {
+          var carbonTarget = document.querySelector(window.location.hash);
+          if (carbonTarget) {
+            var navbar = document.getElementById("navbar");
+            carbonTarget.style.scrollMarginTop = ((navbar ? navbar.getBoundingClientRect().height : 70) + 20) + "px";
+            carbonTarget.scrollIntoView();
+          }
         } else if (window.location.hash.indexOf("#year-") === 0) {
           var target = document.querySelector(window.location.hash);
           if (target) {
@@ -117,6 +125,7 @@
         loading.classList.add("publication-loading-error");
         loading.innerHTML = 'The publication archive could not be loaded. <a href="/publications/">Open the publications page</a>.';
         publications.setAttribute("aria-busy", "false");
+        document.dispatchEvent(new Event("homepage:publications-failed"));
         window.dispatchEvent(new Event("resize"));
       });
   }
@@ -143,7 +152,7 @@
       return;
     }
 
-    if (window.location.hash === "#publications" || window.location.hash === "#awards" || window.location.hash === "#teaching" || window.location.hash === "#service" || window.location.hash === "#visitors" || window.location.hash.indexOf("#year-") === 0) {
+    if (window.location.hash === "#publications" || window.location.hash === "#carbon-globe" || window.location.hash === "#carbon-spotlight" || window.location.hash === "#awards" || window.location.hash === "#teaching" || window.location.hash === "#service" || window.location.hash === "#visitors" || window.location.hash.indexOf("#year-") === 0) {
       loadPublications();
       return;
     }

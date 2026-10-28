@@ -1,0 +1,192 @@
+/* A compact, theme-aware window into the project; the film supplies the color. */
+.research-spotlight {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(28px, 4vw, 48px);
+  margin: 0 0 44px;
+  scroll-margin-top: 90px;
+}
+
+.research-spotlight[hidden] { display: none; }
+
+.spotlight-media {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  background: #081116;
+}
+
+.spotlight-teaser {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.spotlight-media-caption {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 28px 60px 14px 17px;
+  background: linear-gradient(transparent, rgba(3, 12, 18, 0.75));
+  color: #fff;
+  font-size: 0.69rem;
+  font-weight: 400;
+  letter-spacing: 0.045em;
+  pointer-events: none;
+}
+
+.spotlight-motion {
+  position: absolute;
+  z-index: 1;
+  right: 10px;
+  bottom: 8px;
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  background: rgba(8, 17, 22, 0.6);
+  color: #fff;
+  font-size: 0.65rem;
+  cursor: pointer;
+}
+
+.spotlight-motion[hidden] { display: none; }
+.spotlight-motion:hover { background: rgba(8, 17, 22, 0.9); }
+
+.spotlight-copy .about-section-label {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 7px 12px;
+  margin: 0 0 12px;
+  font-size: 0.65rem;
+}
+
+.spotlight-copy .about-section-label span {
+  padding-left: 12px;
+  border-left: 1px solid var(--theme-line);
+  color: var(--theme-muted);
+  font-weight: 400;
+  letter-spacing: 0.035em;
+  text-transform: none;
+}
+
+.research-spotlight h2 {
+  margin: 0 0 12px;
+  color: var(--theme-text);
+  font-family: "Roboto Slab", "Times New Roman", serif;
+  font-size: clamp(1.8rem, 3vw, 2.25rem);
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+.spotlight-tagline {
+  margin: 0 0 9px;
+  color: var(--theme-text);
+  font-size: 1.03rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.spotlight-description {
+  max-width: 390px;
+  margin: 0;
+  color: var(--theme-muted);
+  font-size: 0.86rem;
+  font-weight: 400;
+  line-height: 1.65;
+}
+
+.spotlight-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 22px;
+  margin-top: 22px;
+}
+
+.spotlight-actions a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 36px;
+  color: var(--theme-accent-strong);
+  font-size: 0.82rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.spotlight-project { border-bottom: 1px solid var(--theme-line); }
+.spotlight-actions a:hover { color: var(--theme-accent); }
+.spotlight-project:hover { border-color: currentColor; }
+.spotlight-watch i { font-size: 0.6rem; }
+.spotlight-watch span { color: var(--theme-muted); font-size: 0.7rem; font-weight: 400; }
+
+.research-spotlight :focus-visible,
+.carbon-film-dialog :focus-visible {
+  outline: 3px solid var(--theme-accent);
+  outline-offset: 4px;
+}
+
+/* Attach the film to its publication without repeating the paper's metadata. */
+.publication-card .spotlight-inline {
+  grid-template-columns: minmax(0, 360px) minmax(0, 1fr);
+  gap: 24px;
+  margin: 18px 0 4px;
+}
+
+.spotlight-inline .about-section-label,
+.spotlight-inline h2 { display: none; }
+.spotlight-inline .spotlight-media { border-radius: 9px; }
+.spotlight-inline .spotlight-tagline { font-size: 0.98rem; }
+.spotlight-inline .spotlight-description { font-size: 0.8rem; }
+.spotlight-inline .spotlight-actions { gap: 6px 18px; margin-top: 12px; }
+.spotlight-inline .spotlight-actions a { font-size: 0.76rem; }
+.spotlight-inline .spotlight-media-caption { font-size: 0.6rem; }
+.homepage-publications #carbon-globe { scroll-margin-top: 90px; }
+
+.carbon-film-dialog {
+  width: min(960px, calc(100vw - 32px));
+  max-width: none;
+  max-height: calc(100dvh - 32px);
+  margin: auto;
+  padding: 0;
+  overflow: auto;
+  border: 1px solid var(--theme-line);
+  border-radius: 12px;
+  background: var(--theme-surface);
+  color: var(--theme-text);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
+}
+
+.carbon-film-dialog::backdrop { background: rgba(4, 10, 16, 0.8); }
+.carbon-film-dialog:not([open]) { display: none; }
+.carbon-film-heading { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 12px 18px; }
+.carbon-film-heading h2 { margin: 0; font-family: inherit; font-size: 1rem; font-weight: 500; }
+.carbon-film-close { width: 36px; height: 36px; padding: 0; border: 0; border-radius: 50%; background: var(--theme-surface-soft); color: var(--theme-text); cursor: pointer; }
+.carbon-full-film { display: block; width: 100%; max-height: 70dvh; aspect-ratio: 16 / 9; background: #000; }
+.carbon-film-dialog > p { margin: 0; padding: 14px 18px; color: var(--theme-muted); font-size: 0.8rem; line-height: 1.6; }
+.carbon-film-dialog a { color: var(--theme-accent-strong); text-decoration: underline; text-underline-offset: 3px; }
+body.carbon-film-open { overflow: hidden; }
+
+@media (max-width: 767px) {
+  .research-spotlight { grid-template-columns: minmax(0, 1fr); gap: 24px; margin-bottom: 34px; scroll-margin-top: 118px; }
+  .spotlight-media { max-width: 600px; }
+  .spotlight-description { max-width: none; }
+  .spotlight-actions { margin-top: 14px; }
+  .publication-card .spotlight-inline { grid-template-columns: minmax(0, 1fr); gap: 17px; margin: 16px 0 4px; }
+  .homepage-publications #carbon-globe { scroll-margin-top: 118px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
