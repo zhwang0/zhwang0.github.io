@@ -61,6 +61,9 @@
 .spotlight-motion[hidden] { display: none; }
 .spotlight-motion:hover { background: rgba(8, 17, 22, 0.9); }
 
+/* Keep playback controls clear of subtitles burned into the video. */
+.spotlight-media-subtitled .spotlight-motion { top: 8px; bottom: auto; }
+
 .spotlight-copy .about-section-label {
   display: flex;
   align-items: center;
