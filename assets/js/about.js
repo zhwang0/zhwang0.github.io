@@ -6,6 +6,12 @@
     return;
   }
 
+  function isProjectHash() {
+    return Array.prototype.some.call(document.querySelectorAll(".research-spotlight[data-paper-id]"), function (spotlight) {
+      return window.location.hash === "#" + spotlight.id || window.location.hash === "#" + spotlight.getAttribute("data-paper-id");
+    });
+  }
+
   function secureExternalLinks(root) {
     Array.prototype.slice.call(root.querySelectorAll('a[target="_blank"]')).forEach(function (link) {
       link.rel = "noopener noreferrer";
@@ -56,7 +62,7 @@
     }
     publications.setAttribute("data-load-started", "true");
 
-    fetch("/publications/?v=20261027-carbon1")
+    fetch("/publications/?v=20261029-eswm1")
       .then(function (response) {
         if (!response.ok) {
           throw new Error("Unable to load publications");
@@ -101,12 +107,12 @@
 
         if (window.location.hash === "#publications") {
           publications.scrollIntoView();
-        } else if (window.location.hash === "#carbon-globe" || window.location.hash === "#carbon-spotlight") {
-          var carbonTarget = document.querySelector(window.location.hash);
-          if (carbonTarget) {
+        } else if (isProjectHash()) {
+          var projectTarget = document.getElementById(window.location.hash.slice(1));
+          if (projectTarget) {
             var navbar = document.getElementById("navbar");
-            carbonTarget.style.scrollMarginTop = ((navbar ? navbar.getBoundingClientRect().height : 70) + 20) + "px";
-            carbonTarget.scrollIntoView();
+            projectTarget.style.scrollMarginTop = ((navbar ? navbar.getBoundingClientRect().height : 70) + 20) + "px";
+            projectTarget.scrollIntoView();
           }
         } else if (window.location.hash.indexOf("#year-") === 0) {
           var target = document.querySelector(window.location.hash);
@@ -152,7 +158,7 @@
       return;
     }
 
-    if (window.location.hash === "#publications" || window.location.hash === "#carbon-globe" || window.location.hash === "#carbon-spotlight" || window.location.hash === "#awards" || window.location.hash === "#teaching" || window.location.hash === "#service" || window.location.hash === "#visitors" || window.location.hash.indexOf("#year-") === 0) {
+    if (window.location.hash === "#publications" || isProjectHash() || window.location.hash === "#awards" || window.location.hash === "#teaching" || window.location.hash === "#service" || window.location.hash === "#visitors" || window.location.hash.indexOf("#year-") === 0) {
       loadPublications();
       return;
     }

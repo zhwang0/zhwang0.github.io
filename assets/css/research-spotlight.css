@@ -152,7 +152,7 @@
 .spotlight-inline .spotlight-actions { gap: 6px 18px; margin-top: 12px; }
 .spotlight-inline .spotlight-actions a { font-size: 0.76rem; }
 .spotlight-inline .spotlight-media-caption { font-size: 0.6rem; }
-.homepage-publications #carbon-globe { scroll-margin-top: 90px; }
+.homepage-publications .spotlight-paper { scroll-margin-top: 90px; }
 
 .carbon-film-dialog {
   width: min(960px, calc(100vw - 32px));
@@ -184,7 +184,7 @@ body.carbon-film-open { overflow: hidden; }
   .spotlight-description { max-width: none; }
   .spotlight-actions { margin-top: 14px; }
   .publication-card .spotlight-inline { grid-template-columns: minmax(0, 1fr); gap: 17px; margin: 16px 0 4px; }
-  .homepage-publications #carbon-globe { scroll-margin-top: 118px; }
+  .homepage-publications .spotlight-paper { scroll-margin-top: 118px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
