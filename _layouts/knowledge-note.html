@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: 'en' | escape }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title | escape }} | Zhihao Wang</title>
+  <meta name="description" content="{{ page.description | escape }}">
+  <script src="/assets/js/theme.js?v=20260902-theme1"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Instrument+Serif:ital@0;1&amp;display=swap">
+  <link rel="stylesheet" href="/assets/css/main.css?v=20260813-performance">
+  <link rel="stylesheet" href="/assets/css/theme.css?v=20261112-navigation1">
+  <link rel="stylesheet" href="/assets/css/knowledge.css?v=20261112-readingroom3">
+</head>
+<body class="knowledge-view">
+  <a class="knowledge-skip-link" href="#main-content">Skip to content</a>
+  <nav id="navbar" class="navbar fixed-top navbar-expand-xl grey lighten-5 z-depth-1 navbar-light" aria-label="Main navigation">
+    <div class="container-fluid p-0">
+      <a class="navbar-brand title" href="/">Zhihao Wang</a>
+      <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+      </button>
+      <div class="collapse navbar-collapse text-right" id="navbarNav">
+        <ul class="navbar-nav ml-auto flex-nowrap">
+          <li class="nav-item"><a class="nav-link" href="/#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="/#publications">Publications</a></li>
+          <li class="nav-item"><a class="nav-link" href="/#awards">Awards</a></li>
+          <li class="nav-item"><a class="nav-link" href="/#teaching">Teaching</a></li>
+          <li class="nav-item"><a class="nav-link" href="/#service">Service</a></li>
+          <li class="nav-item navbar-active font-weight-bold"><a class="nav-link" href="/knowledge/" aria-current="location">Knowledge Sharing</a></li>
+          <li class="nav-item"><a class="nav-link" href="/resume/">Resume</a></li>
+        </ul>
+      </div>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch color theme" aria-pressed="false">
+        <span class="theme-label-light">Dark</span><span class="theme-label-dark">Light</span>
+      </button>
+    </div>
+  </nav>
+
+  <main id="main-content" class="knowledge-note" tabindex="-1">
+    <a class="knowledge-back" href="/knowledge/#learning-notes">Back to learning notes</a>
+    <header class="knowledge-note-header">
+      <p class="knowledge-eyebrow">From the reading desk</p>
+      <h1>{{ page.title | escape }}</h1>
+      {% if page.description %}<p class="knowledge-note-description">{{ page.description | escape }}</p>{% endif %}
+      {% if page.date %}<p class="knowledge-note-date"><time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: '%B %-d, %Y' }}</time></p>{% endif %}
+    </header>
+    <article class="note-prose">
+      {{ content }}
+    </article>
+  </main>
+
+  <footer class="knowledge-footer">
+    <div class="knowledge-footer-inner">
+      <span>Zhihao Wang</span>
+      <a href="/knowledge/">Knowledge Sharing</a>
+    </div>
+  </footer>
+  <script src="/assets/js/site.js?v=20260818-navigation1"></script>
+</body>
+</html>

@@ -387,6 +387,28 @@ body {
   }
 }
 
+@media (min-width: 768px) and (max-width: 1199.98px) {
+  #navbar.navbar-expand-xl .container-fluid,
+  #navbar.navbar-expand-xl .container {
+    flex-wrap: wrap;
+  }
+
+  #navbar.navbar-expand-xl .theme-toggle {
+    order: 2;
+    margin-left: auto;
+  }
+
+  #navbar.navbar-expand-xl .navbar-toggler {
+    order: 3;
+    margin-left: 2px !important;
+  }
+
+  #navbar.navbar-expand-xl .navbar-collapse {
+    order: 4;
+    flex-basis: 100%;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   body,
   .navbar,
