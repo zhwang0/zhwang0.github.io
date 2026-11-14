@@ -43,13 +43,11 @@
 }
 .knowledge-view #navbar .container-fluid { max-width: 1184px; }
 .knowledge-view #navbar .navbar-brand { margin-right: 32px; color: var(--theme-text) !important; font: 500 1rem/1.5 "DM Sans", sans-serif; letter-spacing: -0.035em; }
-.knowledge-view #navbar .nav-link { padding: 10px 12px; color: var(--theme-muted) !important; font-size: 0.78rem; font-weight: 400; white-space: nowrap; }
-.knowledge-view #navbar .nav-link:hover,
-.knowledge-view #navbar .navbar-active .nav-link { color: var(--theme-text) !important; }
-.knowledge-view #navbar .navbar-active .nav-link { text-decoration: underline; text-decoration-color: var(--theme-line); text-underline-offset: 7px; }
-.knowledge-view #navbar .navbar-toggler,
+.knowledge-view #navbar .knowledge-home,
 .knowledge-view #navbar .theme-toggle { min-width: 48px; min-height: 44px; width: auto; height: auto; padding: 8px; border: 0; border-radius: 0; background: transparent; color: var(--theme-muted); font: 400 0.78rem/1.5 "DM Sans", sans-serif; transform: none; }
-.knowledge-view #navbar .theme-toggle { flex-basis: auto; margin-left: 16px; }
+.knowledge-view #navbar .theme-toggle { flex-basis: auto; margin-left: auto; order: 2; }
+.knowledge-view #navbar .knowledge-home { display: inline-flex; align-items: center; justify-content: center; margin-left: 8px; order: 3; color: var(--theme-muted) !important; }
+.knowledge-view #navbar .knowledge-home:hover { color: var(--theme-text) !important; text-decoration: underline; }
 .knowledge-view #navbar .theme-toggle:hover { color: var(--theme-text); }
 .theme-label-dark, :root[data-theme="dark"] .theme-label-light { display: none; }
 :root[data-theme="dark"] .theme-label-dark { display: inline; }
@@ -140,9 +138,6 @@
 .note-list a { color: var(--theme-text); font: 400 1.9rem/1.2 var(--knowledge-serif); }
 .note-list p { margin: 8px 0 0; color: var(--theme-muted); font-size: 0.9rem; line-height: 1.7; }
 
-@media (max-width: 1199.98px) {
-  .knowledge-view #navbar .theme-toggle { margin-left: auto; }
-}
 @media (max-width: 1000px) {
   .knowledge-intro { gap: 40px; }
   .learning-film { grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: 32px; }
@@ -152,7 +147,6 @@
 @media (max-width: 767.98px) {
   .knowledge-view #navbar { padding: 10px 20px; }
   .knowledge-view #navbar .navbar-brand { margin-right: 16px; }
-  .knowledge-view #navbar .nav-link { padding: 12px 8px; }
   .knowledge-page, .knowledge-footer > div, .knowledge-note { width: calc(100% - 40px); }
   .knowledge-intro { grid-template-columns: 1fr; gap: 32px; padding: 34px 0 48px; }
   .reading-room-copy { padding: 0; text-align: center; }
